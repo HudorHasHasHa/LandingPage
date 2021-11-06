@@ -1,0 +1,63 @@
+$page-background-color: #fcfcfc;
+// Fonts
+$header-font: OpenSans-Bold;
+
+// Header colors
+$header-links-color: #858585;
+$header-links-color-hover: #333333;
+$header-button-color: #6272c7;
+
+body{
+  background-color: $page-background-color;
+}
+
+.content-wrapper{
+  padding: 0 260px;
+}
+
+.button{
+  border-radius: 18px;
+  background-color: $header-button-color;
+  color: #fff;
+  width: 122px;
+  height: 40px;
+}
+
+header{
+  height: 88px;
+  display: flex;
+  justify-content: space-between;
+  .logo{
+    margin: 20px 0;
+  }
+  nav{
+    flex:1;
+    display: flex;
+    flex-direction: row-reverse;
+    ul{
+      list-style: none;
+      padding:0;
+      margin:0;
+      display: flex;
+      align-items: center;
+      li{
+        padding-right: 50px;
+        display: inline-block;
+        text-transform: uppercase;
+        margin: auto 0;
+        a{
+          font-family: $header-font;
+          text-decoration: none;
+          color: $header-links-color;
+
+          &:hover{
+            color: $header-links-color-hover;
+          }
+        }
+      }
+      :last-child{
+        padding-right: 0;
+      }
+    }
+  }
+}
