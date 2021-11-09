@@ -23,6 +23,11 @@ $bar-progress3: #ffc050;
 // Design section
 $text-color: #333333;
 
+
+// Footer
+$footer-background: #081f26;
+$footer-text: #fff;
+
 body{
   background-color: $page-background-color;
 }
@@ -59,6 +64,25 @@ header{
   padding: 16px;
   background: $section-background;
   margin-bottom: 16px;
+}
+
+.growing-button{
+  position: relative;
+  top: 0;
+  text-transform: uppercase;
+  // margin-top: 20px;
+  padding: 16px 35.5px;
+  border-radius: 24px;
+  font-size: 12px;
+  line-height: 1.33;
+  background-image: linear-gradient(to right, #828fd3 0%, #5e6dbe 50%, #5461aa 100%);
+  color: white;
+  border: 0;
+  &:hover{
+    top: -4px;
+    transition: 300;
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16);
+  }
 }
 
 .start-growing{
@@ -103,24 +127,6 @@ header{
         display: flex;
         white-space: nowrap;
       }
-      .growing-button{
-        position: relative;
-        top: 0;
-        text-transform: uppercase;
-        // margin-top: 20px;
-        padding: 16px 35.5px;
-        border-radius: 24px;
-        font-size: 12px;
-        line-height: 1.33;
-        background-image: linear-gradient(to right, #828fd3 0%, #5e6dbe 50%, #5461aa 100%);
-        color: white;
-        border: 0;
-        &:hover{
-          top: -4px;
-          transition: 300;
-          box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16);
-        }
-      }
       .growing-button-1{
         @extend .growing-button;
         background-image: linear-gradient(to right, #ffcd73 0%, #f3b74c 50%, #d9a444 100%);
@@ -161,6 +167,13 @@ header{
   .content-wrapper{
     padding: 30px 50px ;
   } 
+  .about-logo-mobile{
+    padding: 24px;
+    img{
+      object-fit: contain;
+      width: 100%;
+    }
+  }
   .progress-wrapper{
     .about-paragraph{
       display: flex;
@@ -195,15 +208,35 @@ header{
 
 .offer{
   .content-wrapper{
-    padding: 30px 50px;
-    
+    padding: 30px 50px; 
   }
+  .offer-logo-mobile{
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    img{
+      object-fit: contain;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  // .offer-logo{
+  //   background-image: url("/src/images/image-landing-3-player.png");
+  //   width: 100%;
+  //   height: 100%;
+  // }
   .offer-list{
     list-style: none;
     padding: 0; margin: 0;
+    padding-bottom: 36px;
     > * {
+      padding-bottom: 12px;
       display: flex;
       align-items: center;
+    }
+    :last-child{
+      padding-bottom: 0;
     }
     img{
       margin-right: 8px;
@@ -213,8 +246,19 @@ header{
 }
 
 .design{
+  .desing-logo{
+    padding: 36px 29px 20px 20px !important;
+    img{
+      display: block;
+      margin: 0 auto;
+      padding: 0;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
   .content-wrapper{
     padding: 36px 36px;
+    padding-top: 0;
     .design-data{
       display: flex;
       color: $text-color;
@@ -237,6 +281,25 @@ header{
       color: $text-color;
     }
   }
+}
+
+.start-your-website{
+  display: flex;
+
+  .start-title{
+    text-transform: capitalize;
+  }
+
+  .start-now{
+    @extend .growing-button;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+footer{
+  background: $footer-background;
+  color: $footer-text;
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -308,6 +371,21 @@ header{
       }
     }
   }
+
+  .growing-button{
+    top: 0;
+    margin: 56px 30px 0 0;
+    padding: 16px 35.5px;
+    border-radius: 24px;
+    font-size: 12px;
+    line-height: 1.33;
+    border: 0;
+    &:hover{
+      top: -4px;
+      transition: 300;
+      box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16);
+    }
+  }
   
   .start-growing{
     margin-top: 82px;
@@ -317,6 +395,7 @@ header{
       display: flex;
       background: #fef3df;
       .growing-description{
+        flex: 1;
         padding: 86px 92px 86px 44px; 
         .growing-title{
           font-size: 40px;
@@ -345,27 +424,17 @@ header{
         .growing-paragraph{
           font-size: 16px;
         }
-        .growing-button{
-          top: 0;
-          margin: 56px 30px 0 0;
-          padding: 16px 35.5px;
-          border-radius: 24px;
-          font-size: 12px;
-          line-height: 1.33;
-          border: 0;
-          &:hover{
-            top: -4px;
-            transition: 300;
-            box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16);
-          }
-        }
       }
+      // .growing-img{
+      //   flex: 1;
+      //   display: flex;
+      //   background-image: url("/src/images/image-landing-3-money.png");
+      //   background-size: contain;
+      //   background-repeat: no-repeat;
+      //   background-position: center;
+      // }
       .growing-img{
-        display: flex;
-        background-image: url("/src/images/image-landing-3-money.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        
       }
     }
   }

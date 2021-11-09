@@ -27,6 +27,22 @@ header {
   background: #fff;
   margin-bottom: 16px; }
 
+.growing-button, .start-growing .growing-background .growing-description .growing-button-1, .start-your-website .start-now {
+  position: relative;
+  top: 0;
+  text-transform: uppercase;
+  padding: 16px 35.5px;
+  border-radius: 24px;
+  font-size: 12px;
+  line-height: 1.33;
+  background-image: linear-gradient(to right, #828fd3 0%, #5e6dbe 50%, #5461aa 100%);
+  color: white;
+  border: 0; }
+  .growing-button:hover, .start-growing .growing-background .growing-description .growing-button-1:hover, .start-your-website .start-now:hover {
+    top: -4px;
+    transition: 300;
+    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16); }
+
 .start-growing {
   margin-top: 82px;
   padding: 16px;
@@ -64,21 +80,6 @@ header {
       .start-growing .growing-background .growing-description .growing-buttons {
         display: flex;
         white-space: nowrap; }
-      .start-growing .growing-background .growing-description .growing-button, .start-growing .growing-background .growing-description .growing-button-1 {
-        position: relative;
-        top: 0;
-        text-transform: uppercase;
-        padding: 16px 35.5px;
-        border-radius: 24px;
-        font-size: 12px;
-        line-height: 1.33;
-        background-image: linear-gradient(to right, #828fd3 0%, #5e6dbe 50%, #5461aa 100%);
-        color: white;
-        border: 0; }
-        .start-growing .growing-background .growing-description .growing-button:hover, .start-growing .growing-background .growing-description .growing-button-1:hover {
-          top: -4px;
-          transition: 300;
-          box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16); }
       .start-growing .growing-background .growing-description .growing-button-1 {
         background-image: linear-gradient(to right, #ffcd73 0%, #f3b74c 50%, #d9a444 100%);
         display: none; }
@@ -103,6 +104,12 @@ header {
 
 .about-us .content-wrapper {
   padding: 30px 50px; }
+
+.about-us .about-logo-mobile {
+  padding: 24px; }
+  .about-us .about-logo-mobile img {
+    object-fit: contain;
+    width: 100%; }
 
 .about-us .progress-wrapper .about-paragraph {
   display: flex;
@@ -131,19 +138,43 @@ header {
 .offer .content-wrapper {
   padding: 30px 50px; }
 
+.offer .offer-logo-mobile {
+  padding: 24px;
+  display: flex;
+  align-items: center; }
+  .offer .offer-logo-mobile img {
+    object-fit: contain;
+    width: 100%;
+    display: block;
+    margin: 0 auto; }
+
 .offer .offer-list {
   list-style: none;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  padding-bottom: 36px; }
   .offer .offer-list > * {
+    padding-bottom: 12px;
     display: flex;
     align-items: center; }
+  .offer .offer-list :last-child {
+    padding-bottom: 0; }
   .offer .offer-list img {
     margin-right: 8px;
     object-fit: contain; }
 
+.design .desing-logo {
+  padding: 36px 29px 20px 20px !important; }
+  .design .desing-logo img {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    object-fit: cover;
+    width: 100%; }
+
 .design .content-wrapper {
-  padding: 36px 36px; }
+  padding: 36px 36px;
+  padding-top: 0; }
   .design .content-wrapper .design-data {
     display: flex;
     color: #333333;
@@ -162,6 +193,18 @@ header {
     letter-spacing: normal;
     text-decoration: none;
     color: #333333; }
+
+.start-your-website {
+  display: flex; }
+  .start-your-website .start-title {
+    text-transform: capitalize; }
+  .start-your-website .start-now {
+    width: 80%;
+    margin: 0 auto; }
+
+footer {
+  background: #081f26;
+  color: #fff; }
 
 @media (min-width: 992px) {
   .content-wrapper {
@@ -209,6 +252,18 @@ header {
             background-color: #6272c7;
             color: #fff;
             border: none; }
+  .growing-button, .start-growing .growing-background .growing-description .growing-button-1, .start-your-website .start-now {
+    top: 0;
+    margin: 56px 30px 0 0;
+    padding: 16px 35.5px;
+    border-radius: 24px;
+    font-size: 12px;
+    line-height: 1.33;
+    border: 0; }
+    .growing-button:hover, .start-growing .growing-background .growing-description .growing-button-1:hover, .start-your-website .start-now:hover {
+      top: -4px;
+      transition: 300;
+      box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16); }
   .start-growing {
     margin-top: 82px;
     padding: 16px;
@@ -217,6 +272,7 @@ header {
       display: flex;
       background: #fef3df; }
       .start-growing .growing-background .growing-description {
+        flex: 1;
         padding: 86px 92px 86px 44px; }
         .start-growing .growing-background .growing-description .growing-title {
           font-size: 40px;
@@ -240,25 +296,7 @@ header {
               background: #ffc050;
               width: 100%; }
         .start-growing .growing-background .growing-description .growing-paragraph {
-          font-size: 16px; }
-        .start-growing .growing-background .growing-description .growing-button, .start-growing .growing-background .growing-description .growing-button-1 {
-          top: 0;
-          margin: 56px 30px 0 0;
-          padding: 16px 35.5px;
-          border-radius: 24px;
-          font-size: 12px;
-          line-height: 1.33;
-          border: 0; }
-          .start-growing .growing-background .growing-description .growing-button:hover, .start-growing .growing-background .growing-description .growing-button-1:hover {
-            top: -4px;
-            transition: 300;
-            box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16); }
-      .start-growing .growing-background .growing-img {
-        display: flex;
-        background-image: url("/src/images/image-landing-3-money.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; } }
+          font-size: 16px; } }
 
 @media (min-width: 1200px) {
   .content-wrapper {
@@ -303,12 +341,12 @@ header {
             width: 100%; }
         .start-growing .growing-background .growing-description .growing-paragraph {
           font-size: 20px; }
-        .start-growing .growing-background .growing-description .growing-button, .start-growing .growing-background .growing-description .growing-button-1 {
+        .start-growing .growing-background .growing-description .growing-button, .start-growing .growing-background .growing-description .growing-button-1, .start-growing .growing-background .growing-description .start-your-website .start-now, .start-your-website .start-growing .growing-background .growing-description .start-now {
           margin: 56px 30px 0 2px;
           padding: 16px 35.5px;
           border-radius: 24px;
           font-size: 12px; }
-          .start-growing .growing-background .growing-description .growing-button:hover, .start-growing .growing-background .growing-description .growing-button-1:hover {
+          .start-growing .growing-background .growing-description .growing-button:hover, .start-growing .growing-background .growing-description .growing-button-1:hover, .start-growing .growing-background .growing-description .start-your-website .start-now:hover, .start-your-website .start-growing .growing-background .growing-description .start-now:hover {
             top: -4px;
             transition: 300;
             box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16); }
