@@ -2,6 +2,9 @@ $page-background-color: #fcfcfc;
 // Fonts
 $header-font: OpenSans-Bold;
 
+// Components border color
+$component-border: #f2f2f2;
+
 //Mobile header
 $mobile-header-bg: #fff;
 
@@ -23,6 +26,14 @@ $bar-progress3: #ffc050;
 // Design section
 $text-color: #333333;
 
+// Jax Teller 
+$jax-background: #fff;
+
+// Logos 
+$logos-background: #fff;
+
+// Ad {start your website}
+$ad-background: #fae9c9;
 
 // Footer
 $footer-background: #081f26;
@@ -34,6 +45,10 @@ body{
 
 .content-wrapper{
   padding: 0 16px;
+  div {
+    margin-bottom: 16px;
+    color: #333333;
+  }
 }
 
 header{
@@ -63,7 +78,6 @@ header{
 .component-wrapper{
   padding: 16px;
   background: $section-background;
-  margin-bottom: 16px;
 }
 
 .growing-button{
@@ -86,18 +100,18 @@ header{
 }
 
 .start-growing{
-  margin-top: 82px;
+  margin-top: 16px;
   padding: 16px;
   margin-bottom: 16px;
   background: $section-background;
+  border: 1px solid $component-border;
   .growing-background{
     background: #fef3df;
+    padding: 36px 24px;
     .growing-description{
-      margin: 0 24px;
-      padding: 36px 0;
       .growing-title{
         font-size: 40px;
-        line-height: 52px;
+        line-height: 1.3;
         font-weight: bold;
         font-stretch: normal;
         font-style: normal;
@@ -111,9 +125,9 @@ header{
             content: '';
             left: 0;
             right: 0;
-            bottom: -6px;
+            bottom: -3px;
             position: absolute;
-            height: 30px;
+            height: 22px;
             background: $section-title-underline;
             width: 100%;
           }
@@ -142,37 +156,45 @@ header{
 .our-services{
   .component-wrapper{
     border: solid 1px #f2f2f2;
+    padding:0;
+    margin-bottom: 16px;
+  }
+  :last-child{
+    margin-bottom: 0;
   }
   .content-wrapper{
     padding: 40px 50px;
-      //img
-    :first-child{
+    .services-img{
       margin-bottom:40px
-    }//title
-    :nth-child(2){
+    }
+    .services-title{
       font-size: 24px;
       margin-bottom:20px
-    }//paragraph
-    :nth-child(3){
+    }
+    .ervices-paragraph{
       font-size:16px;
       margin-bottom:40px
-    }//link
-    :nth-child(4){
+    }
+    .services-link{
       font-size: 12px;
     }
   }
 }
 
 .about-us{
-  .content-wrapper{
-    padding: 30px 50px ;
-  } 
-  .about-logo-mobile{
-    padding: 24px;
+  .component-wrapper{
+      padding: 30px 50px;
+  }
+  .about-logo-wrapper{
+    margin-bottom: 16px;
+    border: 1px solid $component-border;
     img{
       object-fit: contain;
       width: 100%;
     }
+  }
+  .about-content{
+    border: 1px solid $component-border;
   }
   .progress-wrapper{
     .about-paragraph{
@@ -207,18 +229,25 @@ header{
 }
 
 .offer{
-  .content-wrapper{
-    padding: 30px 50px; 
+  .component-wrapper{
+    padding: 0;
+    .content-wrapper{
+      padding: 30px 50px; 
+    }
   }
-  .offer-logo-mobile{
-    padding: 24px;
-    display: flex;
-    align-items: center;
-    img{
-      object-fit: contain;
-      width: 100%;
-      display: block;
-      margin: 0 auto;
+  .offer-logo-wrapper{
+    margin-bottom: 16px;
+    .offer-logo-mobile{
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      border: 1px solid $component-border;
+      img{
+        object-fit: contain;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
     }
   }
   // .offer-logo{
@@ -226,33 +255,45 @@ header{
   //   width: 100%;
   //   height: 100%;
   // }
-  .offer-list{
-    list-style: none;
-    padding: 0; margin: 0;
-    padding-bottom: 36px;
-    > * {
-      padding-bottom: 12px;
-      display: flex;
-      align-items: center;
-    }
-    :last-child{
-      padding-bottom: 0;
-    }
-    img{
-      margin-right: 8px;
-      object-fit: contain;
+  .offer-description-wrapper{
+    border: 1px solid $component-border;
+    .offer-list{
+      list-style: none;
+      padding: 0; margin: 0;
+      padding-bottom: 36px;
+      > * {
+        padding-bottom: 12px;
+        display: flex;
+        align-items: center;
+      }
+      :last-child{
+        padding-bottom: 0;
+      }
+      img{
+        margin-right: 8px;
+        object-fit: contain;
+      }
     }
   }
 }
 
 .design{
-  .desing-logo{
-    padding: 36px 29px 20px 20px !important;
+  border: 1px solid $component-border;
+  .component-wrapper{
+    padding: 0;
+    .content-wrapper{
+        padding: 0 20px;
+      // .design-description{
+      // }
+    }
+  }
+  .design-logo{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 36px;
     img{
-      display: block;
-      margin: 0 auto;
       padding: 0;
-      object-fit: cover;
+      object-fit: contain;
       width: 100%;
     }
   }
@@ -283,23 +324,70 @@ header{
   }
 }
 
-.start-your-website{
+.jax-teller{
+  padding: 40px 60px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid $component-border;
+  background: $jax-background;
+  .jax-logo{
+    margin-bottom: 30px;
+  }
+  .jax-description{
+    font-size: 14px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+}
 
+.logos{
+  display: flex;
+  align-items: center;
+  background: $logos-background;
+  border: 1px solid $component-border;
+  img{
+    margin: auto;
+    padding: 20px 0;
+  }
+}
+
+.start-your-website{
+  background: $ad-background;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px 60px;
   .start-title{
     text-transform: capitalize;
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 36px;
   }
 
   .start-now{
     @extend .growing-button;
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    // margin: 0 auto;
   }
 }
 
 footer{
   background: $footer-background;
-  color: $footer-text;
+  padding: 80px 16px;
+  .footer-section-title{
+    color: $footer-text;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .milu{
+    .milu-title{
+      color: $footer-text;
+      font-size: 24px;
+      font-weight: bold;
+    }
+  }
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -309,6 +397,34 @@ footer{
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .content-wrapper{
+
+  }
+
+  .start-growing{
+    .growing-background{
+      padding: 34px;
+      .growing-paragraph{
+
+      }
+      // .growing-img{
+      //   display: flex;
+      //   flex: 1;
+      //   img{
+      //     object-fit: contain;
+      //     height: 100%;
+      //     width: 100%;
+      //   }
+      // }
+      
+      .growing-description{
+    
+        .growing-button-1{
+          display: flex;
+        }
+      }
+    }
+  }
 
 }
 
@@ -425,17 +541,53 @@ footer{
           font-size: 16px;
         }
       }
-      // .growing-img{
-      //   flex: 1;
-      //   display: flex;
-      //   background-image: url("/src/images/image-landing-3-money.png");
-      //   background-size: contain;
-      //   background-repeat: no-repeat;
-      //   background-position: center;
-      // }
       .growing-img{
-        
+        flex: 1;
+        display: flex;
+        background-image: url("/src/images/image-landing-3-money.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
       }
+    }
+  }
+
+  .our-services{
+    display: flex;
+    :first-child, :nth-child(2){
+      margin-right: 36px
+    }
+  }
+
+  .about-us{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 40px 0;
+    // padding:
+    .about-logo-wrapper{
+      flex: 1;
+      margin-right: 18px;
+    }
+    .about-content{
+      flex: 1;
+      margin-left: 18px;
+      .content-wrapper{
+        padding: 50px;
+      }
+    }
+  }
+
+  .offer{
+    display: flex;
+    flex-direction: row;
+    padding: 40px 0;
+    .offer-logo-wrapper{
+      flex: 1; 
+      margin-right: 18px; 
+    }
+    .offer-description-wrapper{
+      flex: 1;
+      margin-left: 18px;
     }
   }
 }
@@ -515,14 +667,6 @@ footer{
             box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16);
           }
         }
-      }
-    }
-    .growing-img{
-      display: flex;
-      img{
-        object-fit: none;
-        height: 100%;
-        width: 100%;
       }
     }
   }
