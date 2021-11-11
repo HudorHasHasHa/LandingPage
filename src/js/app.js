@@ -12,15 +12,16 @@
 //   overlay.classList.remove('is-active');
 // });
 
+let position = window.scrollY;
 const header = document.querySelector("header");
-const body = document.querySelector("body");
-const options = {};
-const observer = new IntersectionObserver(function (entries, observer) {
-  entries.forEach(entry => {
-    if(entry){
-      header.classList.add('header-scrolled');
-    }
-  })
-}, options);
+const header_height = header.offsetHeight;
+const add = () => header.classList.add("header-scrolled")
+const remove = () => header.classList.remove("header-scrolled")
 
-observer.observe(body)
+window.addEventListener('scroll', function() {
+  position = window.scrollY;
+  
+  if (position >= header_height) { add() }
+  else { remove() }
+});
+
