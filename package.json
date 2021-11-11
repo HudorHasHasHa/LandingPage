@@ -15,7 +15,6 @@
     "@fortawesome/fontawesome-free": "^5.15.4",
     "lite-server": "^2.6.1",
     "node-sass": "^6.0.1",
-    "onchange": "^7.1.0",
     "sass": "^1.43.4"
   },
   "dependencies": {
