@@ -199,6 +199,9 @@ header{
   .about-logo-wrapper{
     margin-bottom: 16px;
     border: 1px solid $component-border;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .about-logo{
       img{
         object-fit: contain;
@@ -1197,10 +1200,6 @@ footer{
   footer{
     padding: 80px 16px 0;
     display: flex;
-    .content-wrapper{
-      display: flex;
-      flex-direction: row;
-    }
     .sm-footer{
       flex:1;
       display: flex;
@@ -1328,6 +1327,7 @@ footer{
   
             &:hover{
               color: $header-links-color-hover;
+              transition: 300ms;
             }
           }
         }
@@ -1360,7 +1360,7 @@ footer{
     border: 0;
     &:hover{
       top: -4px;
-      transition: 300;
+      transition: 300ms;
       box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16);
     }
   }
@@ -1411,6 +1411,7 @@ footer{
     }
     .component-wrapper:hover{
       box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16);
+      transition: 300ms;
     }
   }
 
@@ -1469,6 +1470,24 @@ footer{
     .start-now{
       width: auto;
       margin: 0 !important;
+    }
+  }
+
+  footer{
+    .content-wrapper{
+      display: flex;
+      flex-direction: row;
+    }
+
+    .download-app{
+      .footer-section-description{
+        margin-bottom: 36px;
+      }
+      .stores{
+        .google-play{
+          margin-bottom: 24px;
+        }
+      }
     }
   }
 }
@@ -1531,9 +1550,6 @@ footer{
   .our-services{
     .component-wrapper{
       padding:0;
-    }
-    :last-child{
-      // margin-bottom: 0;
     }
     .content-wrapper{
       padding: 40px 50px;
@@ -1919,9 +1935,6 @@ footer{
     .component-wrapper{
       padding:0;
     }
-    :last-child{
-      // margin-bottom: 0;
-    }
     .content-wrapper{
       padding: 40px 50px;
       .services-img{
@@ -1950,6 +1963,8 @@ footer{
         padding: 50px 50px;
     }
     .about-logo-wrapper{
+      display: flex;
+      align-items: center;
       .about-logo{
         margin: 10px;
         img{
