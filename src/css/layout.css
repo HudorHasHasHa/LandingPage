@@ -593,8 +593,8 @@ footer {
         line-height: 1.88; }
     footer .download-app .stores {
       margin-bottom: 80px; }
-      footer .download-app .stores .google-play {
-        margin-bottom: 24px; }
+      footer .download-app .stores > * {
+        width: 40%; }
     footer .download-app .social-media {
       display: flex;
       justify-content: flex-end;
@@ -999,9 +999,7 @@ footer {
     display: flex;
     flex-direction: row; }
   footer .download-app .footer-section-description {
-    margin-bottom: 36px; }
-  footer .download-app .stores .google-play {
-    margin-bottom: 24px; } }
+    margin-bottom: 36px; } }
 
 @media (min-width: 1200px) {
   .content-wrapper {
@@ -1496,6 +1494,8 @@ footer {
         line-height: 1.88; }
     footer .download-app .stores {
       margin-bottom: 80px; }
+      footer .download-app .stores .google-play {
+        margin-bottom: 0; }
     footer .download-app .social-media {
       display: flex;
       justify-content: flex-end;

@@ -881,8 +881,8 @@ footer{
     .download-app{
       .stores{
         margin-bottom: 80px;
-        .google-play{
-          margin-bottom: 24px;
+        > * {
+          width: 40%;
         }
       }
   
@@ -1482,11 +1482,6 @@ footer{
     .download-app{
       .footer-section-description{
         margin-bottom: 36px;
-      }
-      .stores{
-        .google-play{
-          margin-bottom: 24px;
-        }
       }
     }
   }
@@ -2232,8 +2227,11 @@ footer{
     .download-app{
       .stores{
         margin-bottom: 80px;
+        .google-play{
+          margin-bottom: 0;
+        }
       }
-  
+      
       .social-media{
         display: flex;
         justify-content: flex-end;
