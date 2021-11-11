@@ -97,11 +97,6 @@ header{
   background-image: linear-gradient(to right, #828fd3 0%, #5e6dbe 50%, #5461aa 100%);
   color: white;
   border: 0;
-  &:hover{
-    top: -4px;
-    transition: 300;
-    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16);
-  }
 }
 
 .start-growing{
@@ -1413,6 +1408,9 @@ footer{
     display: flex;
     .component-wrapper + .component-wrapper {
       margin-left: 36px;
+    }
+    .component-wrapper:hover{
+      box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16);
     }
   }
 

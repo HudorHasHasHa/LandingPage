@@ -40,10 +40,6 @@ header {
   background-image: linear-gradient(to right, #828fd3 0%, #5e6dbe 50%, #5461aa 100%);
   color: white;
   border: 0; }
-  .growing-button:hover, .start-growing .growing-background .growing-description .growing-button-1:hover, .start-your-website .start-now:hover {
-    top: -4px;
-    transition: 300;
-    box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16); }
 
 .start-growing {
   margin-top: 16px;
@@ -953,6 +949,8 @@ footer {
     display: flex; }
     .our-services .component-wrapper + .component-wrapper {
       margin-left: 36px; }
+    .our-services .component-wrapper:hover {
+      box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16); }
   .about-us {
     display: flex;
     flex-direction: row-reverse; }
