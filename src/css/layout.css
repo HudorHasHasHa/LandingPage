@@ -3,13 +3,12 @@ body {
 
 .content-wrapper {
   padding: 0 16px; }
-  .content-wrapper div {
+  .content-wrapper .component {
     margin-bottom: 16px;
     color: #333333; }
 
 header {
-  margin: 0 8px;
-  background: #fff;
+  margin: 0 16px;
   height: 66px;
   display: flex;
   justify-content: space-between; }
@@ -36,6 +35,7 @@ header {
   padding: 16px 35.5px;
   border-radius: 24px;
   font-size: 12px;
+  font-weight: bold;
   line-height: 1.33;
   background-image: linear-gradient(to right, #828fd3 0%, #5e6dbe 50%, #5461aa 100%);
   color: white;
@@ -100,13 +100,23 @@ header {
   .our-services .content-wrapper .services-img {
     margin-bottom: 40px; }
   .our-services .content-wrapper .services-title {
+    font-weight: bold;
     font-size: 24px;
     margin-bottom: 20px; }
-  .our-services .content-wrapper .ervices-paragraph {
+  .our-services .content-wrapper .services-paragraph {
     font-size: 16px;
-    margin-bottom: 40px; }
+    margin-bottom: 40px;
+    line-height: 1.88; }
   .our-services .content-wrapper .services-link {
-    font-size: 12px; }
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #939fde; }
+    .our-services .content-wrapper .services-link img {
+      margin-left: 4px; }
 
 .about-us .component-wrapper {
   padding: 30px 50px; }
@@ -114,36 +124,43 @@ header {
 .about-us .about-logo-wrapper {
   margin-bottom: 16px;
   border: 1px solid #f2f2f2; }
-  .about-us .about-logo-wrapper img {
+  .about-us .about-logo-wrapper .about-logo img {
     object-fit: contain;
     width: 100%; }
 
 .about-us .about-content {
   border: 1px solid #f2f2f2; }
-
-.about-us .progress-wrapper .about-paragraph {
-  display: flex;
-  justify-content: space-between; }
-  .about-us .progress-wrapper .about-paragraph p {
-    margin-bottom: 0; }
-
-.about-us .progress-wrapper .progress-bar {
-  height: 8px;
-  background: #f2f2f2;
-  position: relative;
-  border-radius: 4px; }
-  .about-us .progress-wrapper .progress-bar .progress1 {
-    height: 8px;
-    width: 90%;
-    background: #ffc050; }
-  .about-us .progress-wrapper .progress-bar .progress2 {
-    height: 8px;
-    width: 80%;
-    background: #6272c7; }
-  .about-us .progress-wrapper .progress-bar .progress3 {
-    height: 8px;
-    width: 70%;
-    background: #ffc050; }
+  .about-us .about-content .about-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 36px; }
+  .about-us .about-content .progress-wrapper {
+    margin-bottom: 20px; }
+    .about-us .about-content .progress-wrapper .about-paragraph {
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 10px; }
+      .about-us .about-content .progress-wrapper .about-paragraph p {
+        margin-bottom: 0; }
+    .about-us .about-content .progress-wrapper .progress-bar {
+      height: 8px;
+      background: #f2f2f2;
+      position: relative;
+      border-radius: 4px; }
+      .about-us .about-content .progress-wrapper .progress-bar .progress1 {
+        height: 8px;
+        width: 90%;
+        background: #ffc050; }
+      .about-us .about-content .progress-wrapper .progress-bar .progress2 {
+        height: 8px;
+        width: 80%;
+        background: #6272c7; }
+      .about-us .about-content .progress-wrapper .progress-bar .progress3 {
+        height: 8px;
+        width: 70%;
+        background: #ffc050; }
 
 .offer .component-wrapper {
   padding: 0; }
@@ -151,12 +168,12 @@ header {
     padding: 30px 50px; }
 
 .offer .offer-logo-wrapper {
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  border: 1px solid #f2f2f2; }
   .offer .offer-logo-wrapper .offer-logo-mobile {
     padding: 24px;
     display: flex;
-    align-items: center;
-    border: 1px solid #f2f2f2; }
+    align-items: center; }
     .offer .offer-logo-wrapper .offer-logo-mobile img {
       object-fit: contain;
       width: 100%;
@@ -165,6 +182,12 @@ header {
 
 .offer .offer-description-wrapper {
   border: 1px solid #f2f2f2; }
+  .offer .offer-description-wrapper .offer-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 36px; }
+  .offer .offer-description-wrapper .offer-paragraph {
+    margin-bottom: 36px; }
   .offer .offer-description-wrapper .offer-list {
     list-style: none;
     padding: 0;
@@ -185,36 +208,50 @@ header {
   .design .component-wrapper {
     padding: 0; }
     .design .component-wrapper .content-wrapper {
-      padding: 0 20px; }
-  .design .design-logo {
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 36px; }
-    .design .design-logo img {
-      padding: 0;
-      object-fit: contain;
-      width: 100%; }
+      padding: 36px 36px 0 36px; }
+    .design .component-wrapper .last-design {
+      padding-bottom: 36px; }
   .design .content-wrapper {
     padding: 36px 36px;
     padding-top: 0; }
-    .design .content-wrapper .design-data {
+    .design .content-wrapper .design-logo {
+      display: flex;
+      justify-content: flex-end;
+      padding-top: 36px;
+      padding-bottom: 20px; }
+      .design .content-wrapper .design-logo .hello-mobile {
+        display: flex; }
+      .design .content-wrapper .design-logo .hello-desktop {
+        display: none; }
+      .design .content-wrapper .design-logo img {
+        padding: 0;
+        object-fit: contain;
+        width: 100%; }
+    .design .content-wrapper .design-description .design-title {
+      font-size: 22px;
+      font-weight: bold;
+      line-height: 1.36; }
+    .design .content-wrapper .design-description .design-data {
       display: flex;
       color: #333333;
       font-size: 12px;
       font-weight: normal;
       font-stretch: normal;
       font-style: normal;
-      letter-spacing: normal; }
-    .design .content-wrapper .design-text {
+      letter-spacing: normal;
+      margin: 12px 0; }
+    .design .content-wrapper .design-description .design-text {
       font-size: 16px; }
-    .design .content-wrapper .design-link {
+    .design .content-wrapper .design-description .design-link {
       font-size: 12px;
       font-weight: bold;
-      font-stretch: normal;
-      font-style: normal;
-      letter-spacing: normal;
       text-decoration: none;
-      color: #333333; }
+      color: #333333;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase; }
+      .design .content-wrapper .design-description .design-link img {
+        margin-left: 4px; }
 
 .jax-teller {
   padding: 40px 60px;
@@ -228,7 +265,11 @@ header {
   .jax-teller .jax-description {
     font-size: 14px;
     line-height: 30px;
-    margin-bottom: 20px; }
+    display: flex;
+    justify-content: left;
+    flex-direction: column; }
+    .jax-teller .jax-description .jax-text {
+      margin-bottom: 20px; }
 
 .logos {
   display: flex;
@@ -238,45 +279,595 @@ header {
   .logos img {
     margin: auto;
     padding: 20px 0; }
+  .logos :first-child {
+    display: block; }
+  .logos > * {
+    display: none; }
 
 .start-your-website {
   background: #fae9c9;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 40px 60px; }
+  padding: 60px 40px; }
   .start-your-website .start-title {
     text-transform: capitalize;
     font-weight: bold;
     font-size: 32px;
     text-align: center;
-    margin-bottom: 36px; }
+    margin-bottom: 36px;
+    line-height: 1.5; }
   .start-your-website .start-now {
     width: 100%; }
 
 footer {
   background: #081f26;
-  padding: 80px 16px; }
+  padding: 80px 16px 71px;
+  color: #fff; }
+  footer .footer-section-description {
+    font-size: 16px;
+    line-height: 1.88; }
   footer .footer-section-title {
-    color: #fff;
     font-size: 24px;
-    font-weight: bold; }
-  footer .milu .milu-title {
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold; }
+    font-weight: bold;
+    margin-bottom: 36px; }
+  footer .milu {
+    margin-bottom: 36px; }
+    footer .milu .milu-title {
+      margin-bottom: 36px;
+      display: inline-block;
+      position: relative;
+      font-size: 24px;
+      font-weight: bold;
+      z-index: 1; }
+      footer .milu .milu-title::after {
+        content: '';
+        background: #ffc050;
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: -3px;
+        width: 100%;
+        height: 13px;
+        z-index: -1; }
+  footer .quick-links {
+    margin-bottom: 36px; }
+    footer .quick-links ul {
+      list-style: none;
+      padding: 0; }
+      footer .quick-links ul li {
+        font-size: 16px;
+        line-height: 1.88; }
+  footer .last-tweet {
+    margin-bottom: 36px; }
+    footer .last-tweet .twitter-icon img {
+      color: blue;
+      margin-right: 12px; }
+    footer .last-tweet .twitter-wrapper {
+      display: flex; }
+      footer .last-tweet .twitter-wrapper .twitter-description {
+        font-size: 16px;
+        line-height: 1.88; }
+        footer .last-tweet .twitter-wrapper .twitter-description .data {
+          color: #9ca5a8; }
+  footer .download-app .stores {
+    margin-bottom: 80px; }
+    footer .download-app .stores .google-play {
+      margin-right: 24px; }
+  footer .download-app .social-media {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 71px; }
+    footer .download-app .social-media div {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: #fff;
+      border-radius: 16px;
+      margin-right: 16px; }
+
+@media (min-width: 576px) {
+  .content-wrapper {
+    padding: 0 24px; }
+    .content-wrapper .component {
+      margin-bottom: 32px; }
+  .start-growing {
+    margin-top: 16px;
+    padding: 16px;
+    margin-bottom: 16px; }
+    .start-growing .growing-background {
+      padding: 44px 166px 44px 34px; }
+      .start-growing .growing-background .growing-description .growing-title {
+        font-size: 40px; }
+      .start-growing .growing-background .growing-description .growing-paragraph {
+        font-size: 12px;
+        margin-bottom: 20px; }
+      .start-growing .growing-background .growing-description .growing-buttons .growing-button, .start-growing .growing-background .growing-description .growing-buttons .growing-button-1, .start-growing .growing-background .growing-description .growing-buttons .start-your-website .start-now, .start-your-website .start-growing .growing-background .growing-description .growing-buttons .start-now {
+        margin-right: 20px; }
+      .start-growing .growing-background .growing-description .growing-buttons .growing-button-1 {
+        display: block; }
+      .start-growing .growing-background .growing-img {
+        display: none; }
+  .our-services .component-wrapper {
+    padding: 0;
+    margin-bottom: 16px; }
+  .our-services :last-child {
+    margin-bottom: 0; }
+  .our-services .content-wrapper {
+    padding: 40px 50px; }
+    .our-services .content-wrapper .services-img {
+      margin-bottom: 40px; }
+    .our-services .content-wrapper .services-title {
+      font-size: 24px;
+      margin-bottom: 20px; }
+    .our-services .content-wrapper .services-paragraph {
+      font-size: 16px;
+      margin-bottom: 40px;
+      line-height: 1.88; }
+    .our-services .content-wrapper .services-link {
+      font-size: 12px; }
+      .our-services .content-wrapper .services-link img {
+        margin-left: 4px; }
+  .about-us .component-wrapper {
+    padding: 50px 50px; }
+  .about-us .about-logo-wrapper {
+    margin-bottom: 16px;
+    border: 1px solid #f2f2f2; }
+    .about-us .about-logo-wrapper .about-logo {
+      margin: 10px; }
+      .about-us .about-logo-wrapper .about-logo img {
+        object-fit: contain;
+        width: 100%; }
+  .about-us .about-content {
+    border: 1px solid #f2f2f2; }
+    .about-us .about-content .about-title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 36px; }
+    .about-us .about-content .progress-wrapper {
+      margin-bottom: 20px; }
+      .about-us .about-content .progress-wrapper .about-paragraph {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: bold; }
+        .about-us .about-content .progress-wrapper .about-paragraph p {
+          margin-bottom: 0; }
+      .about-us .about-content .progress-wrapper .progress-bar {
+        height: 8px;
+        background: #f2f2f2;
+        position: relative;
+        border-radius: 4px; }
+        .about-us .about-content .progress-wrapper .progress-bar .progress1 {
+          height: 8px;
+          width: 90%;
+          background: #ffc050; }
+        .about-us .about-content .progress-wrapper .progress-bar .progress2 {
+          height: 8px;
+          width: 80%;
+          background: #6272c7; }
+        .about-us .about-content .progress-wrapper .progress-bar .progress3 {
+          height: 8px;
+          width: 70%;
+          background: #ffc050; }
+  .offer .component-wrapper {
+    padding: 0; }
+    .offer .component-wrapper .content-wrapper {
+      padding: 50px 50px; }
+  .offer .offer-logo-wrapper {
+    margin-bottom: 16px; }
+    .offer .offer-logo-wrapper .offer-logo-mobile {
+      padding: 24px;
+      display: flex;
+      align-items: center; }
+      .offer .offer-logo-wrapper .offer-logo-mobile img {
+        object-fit: contain;
+        width: 100%;
+        display: block;
+        margin: 0 auto; }
+  .offer .offer-description-wrapper {
+    border: 1px solid #f2f2f2; }
+    .offer .offer-description-wrapper .offer-title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 36px; }
+    .offer .offer-description-wrapper .offer-paragraph {
+      margin-bottom: 36px; }
+    .offer .offer-description-wrapper .offer-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      padding-bottom: 36px; }
+      .offer .offer-description-wrapper .offer-list > * {
+        padding-bottom: 12px;
+        display: flex;
+        align-items: center; }
+      .offer .offer-description-wrapper .offer-list :last-child {
+        padding-bottom: 0; }
+      .offer .offer-description-wrapper .offer-list img {
+        margin-right: 8px;
+        object-fit: contain; }
+  .design {
+    border: 1px solid #f2f2f2; }
+    .design .component-wrapper {
+      padding: 0; }
+      .design .component-wrapper .content-wrapper {
+        padding: 0 36px 0 36px; }
+      .design .component-wrapper .last-design {
+        padding-bottom: 36px; }
+    .design .content-wrapper {
+      padding: 36px 36px;
+      padding-top: 0; }
+      .design .content-wrapper .design-logo {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 36px;
+        padding-bottom: 20px; }
+        .design .content-wrapper .design-logo img {
+          padding: 0;
+          object-fit: contain;
+          width: 100%; }
+      .design .content-wrapper .design-description .design-title {
+        font-size: 22px;
+        line-height: 1.36; }
+      .design .content-wrapper .design-description .design-data {
+        font-size: 12px;
+        margin: 12px 0; }
+      .design .content-wrapper .design-description .design-text {
+        font-size: 16px; }
+      .design .content-wrapper .design-description .design-link {
+        font-size: 12px; }
+        .design .content-wrapper .design-description .design-link img {
+          margin-left: 4px; }
+  .jax-teller {
+    padding: 40px 60px; }
+  .logos {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border: 1px solid #f2f2f2;
+    padding: 0 40px; }
+    .logos img {
+      margin: auto;
+      padding: 20px 0; }
+    .logos :first-child {
+      display: block; }
+    .logos :nth-child(2) {
+      display: block; }
+    .logos > * {
+      display: none; }
+  .start-your-website {
+    background: #fae9c9;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 60px; }
+    .start-your-website .start-title {
+      text-transform: capitalize;
+      font-weight: bold;
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 36px;
+      line-height: 1.5; }
+    .start-your-website .start-now {
+      width: 80%; }
+  footer {
+    padding: 80px 16px 0; }
+    footer .sm-footer {
+      display: flex;
+      justify-content: space-between; }
+      footer .sm-footer > * {
+        flex: 1; }
+      footer .sm-footer .milu, footer .sm-footer .last-tweet {
+        margin-right: 15px; }
+      footer .sm-footer .quick-links, footer .sm-footer .download-app {
+        margin-left: 15px; }
+    footer .footer-section-description {
+      font-size: 16px;
+      line-height: 1.88; }
+    footer .footer-section-title {
+      font-size: 24px;
+      margin-bottom: 36px; }
+    footer .milu {
+      margin-bottom: 36px; }
+      footer .milu .milu-title {
+        margin-bottom: 36px;
+        font-size: 24px; }
+        footer .milu .milu-title::after {
+          bottom: -3px;
+          height: 13px; }
+    footer .quick-links {
+      margin-bottom: 36px; }
+      footer .quick-links ul li {
+        font-size: 16px;
+        line-height: 1.88;
+        margin-bottom: 10px; }
+    footer .last-tweet {
+      margin-bottom: 36px; }
+      footer .last-tweet .twitter-icon img {
+        margin-right: 12px; }
+      footer .last-tweet .twitter-wrapper .twitter-description {
+        font-size: 16px;
+        line-height: 1.88; }
+    footer .download-app .stores {
+      margin-bottom: 80px; }
+      footer .download-app .stores .google-play {
+        margin-bottom: 24px; }
+    footer .download-app .social-media {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 71px; }
+      footer .download-app .social-media div {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: #fff;
+        border-radius: 16px;
+        margin-right: 16px; } }
 
 @media (min-width: 768px) {
-  .start-growing .growing-background {
-    padding: 34px; }
-    .start-growing .growing-background .growing-description .growing-button-1 {
-      display: flex; } }
+  .content-wrapper {
+    padding: 0 24px; }
+    .content-wrapper .component {
+      margin-bottom: 32px; }
+  header {
+    margin: 0 24px; }
+  .start-growing {
+    margin-top: 16px;
+    padding: 16px;
+    margin-bottom: 16px; }
+    .start-growing .growing-background {
+      padding: 36px 0 36px 34px;
+      display: flex; }
+      .start-growing .growing-background .growing-description {
+        flex: 1; }
+        .start-growing .growing-background .growing-description .growing-title {
+          font-size: 40px; }
+          .start-growing .growing-background .growing-description .growing-title .growing-underline::after {
+            bottom: -2px; }
+        .start-growing .growing-background .growing-description .growing-paragraph {
+          font-size: 12px;
+          padding-right: 72px;
+          margin-bottom: 20px; }
+        .start-growing .growing-background .growing-description .growing-buttons .growing-button, .start-growing .growing-background .growing-description .growing-buttons .growing-button-1, .start-growing .growing-background .growing-description .growing-buttons .start-your-website .start-now, .start-your-website .start-growing .growing-background .growing-description .growing-buttons .start-now {
+          margin-right: 30px; }
+        .start-growing .growing-background .growing-description .growing-buttons .growing-button-1 {
+          display: block; }
+      .start-growing .growing-background .growing-img {
+        flex: 1;
+        display: flex;
+        background-image: url("/src/images/image-landing-3-money.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; }
+  .our-services .component-wrapper {
+    margin-bottom: 0; }
+  .our-services .content-wrapper {
+    padding: 40px 50px; }
+    .our-services .content-wrapper .services-img {
+      margin-bottom: 40px; }
+    .our-services .content-wrapper .services-title {
+      font-size: 24px;
+      margin-bottom: 20px; }
+    .our-services .content-wrapper .services-paragraph {
+      font-size: 16px;
+      margin-bottom: 40px;
+      line-height: 1.88; }
+    .our-services .content-wrapper .services-link {
+      font-size: 12px; }
+      .our-services .content-wrapper .services-link img {
+        margin-left: 4px; }
+  .about-us .component-wrapper {
+    padding: 50px 50px; }
+  .about-us .about-logo-wrapper {
+    margin-bottom: 16px; }
+    .about-us .about-logo-wrapper .about-logo {
+      margin: 10px; }
+      .about-us .about-logo-wrapper .about-logo img {
+        object-fit: contain;
+        width: 100%; }
+  .about-us .about-content .about-title {
+    font-size: 32px;
+    margin-bottom: 36px; }
+  .about-us .about-content .progress-wrapper {
+    margin-bottom: 20px; }
+    .about-us .about-content .progress-wrapper .about-paragraph {
+      font-size: 14px; }
+      .about-us .about-content .progress-wrapper .about-paragraph p {
+        margin-bottom: 0; }
+    .about-us .about-content .progress-wrapper .progress-bar {
+      height: 8px;
+      border-radius: 4px; }
+      .about-us .about-content .progress-wrapper .progress-bar .progress1 {
+        height: 8px;
+        width: 90%; }
+      .about-us .about-content .progress-wrapper .progress-bar .progress2 {
+        height: 8px;
+        width: 80%; }
+      .about-us .about-content .progress-wrapper .progress-bar .progress3 {
+        height: 8px;
+        width: 70%; }
+  .offer .component-wrapper {
+    padding: 0; }
+    .offer .component-wrapper .content-wrapper {
+      padding: 50px 50px; }
+  .offer .offer-logo-wrapper {
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center; }
+    .offer .offer-logo-wrapper .offer-logo-mobile {
+      width: 100%; }
+      .offer .offer-logo-wrapper .offer-logo-mobile img {
+        object-fit: contain;
+        width: 100%;
+        display: block;
+        margin: 0 auto; }
+  .offer .offer-description-wrapper {
+    border: 1px solid #f2f2f2; }
+    .offer .offer-description-wrapper .offer-title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 36px; }
+    .offer .offer-description-wrapper .offer-paragraph {
+      margin-bottom: 36px; }
+    .offer .offer-description-wrapper .offer-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      padding-bottom: 36px; }
+      .offer .offer-description-wrapper .offer-list > * {
+        padding-bottom: 12px;
+        display: flex;
+        align-items: center; }
+      .offer .offer-description-wrapper .offer-list :last-child {
+        padding-bottom: 0; }
+      .offer .offer-description-wrapper .offer-list img {
+        margin-right: 8px;
+        object-fit: contain; }
+  .design {
+    border: 1px solid #f2f2f2; }
+    .design .component-wrapper {
+      padding: 0;
+      display: flex; }
+      .design .component-wrapper .content-wrapper {
+        padding: 0 36px 0 36px;
+        flex: 1; }
+      .design .component-wrapper .last-design {
+        padding-bottom: 36px; }
+    .design .content-wrapper {
+      padding: 36px 36px;
+      padding-top: 0; }
+      .design .content-wrapper .design-logo {
+        display: flex;
+        align-items: center;
+        padding-top: 36px;
+        padding-bottom: 20px; }
+        .design .content-wrapper .design-logo .hello-mobile {
+          display: none; }
+        .design .content-wrapper .design-logo .hello-desktop {
+          display: flex; }
+        .design .content-wrapper .design-logo img {
+          padding: 0;
+          object-fit: contain;
+          width: 100%; }
+      .design .content-wrapper .design-description .design-title {
+        font-size: 22px;
+        line-height: 1.36; }
+      .design .content-wrapper .design-description .design-data {
+        font-size: 12px;
+        margin: 12px 0; }
+      .design .content-wrapper .design-description .design-text {
+        font-size: 16px; }
+      .design .content-wrapper .design-description .design-link {
+        font-size: 12px; }
+        .design .content-wrapper .design-description .design-link img {
+          margin-left: 4px; }
+  .jax-teller {
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: row; }
+    .jax-teller .jax-logo {
+      margin: 30px 0;
+      margin-right: 80px; }
+      .jax-teller .jax-logo img {
+        object-fit: contain;
+        width: 200px;
+        height: 200px; }
+    .jax-teller .jax-description {
+      font-size: 18px;
+      line-height: 1.67; }
+      .jax-teller .jax-description .jax-signature {
+        font-size: 14px;
+        line-height: 2.14; }
+  .logos {
+    padding: 0 46px; }
+    .logos img {
+      margin: auto;
+      padding: 40px 0; }
+    .logos :first-child {
+      display: block; }
+    .logos :nth-child(2) {
+      display: block; }
+    .logos :nth-child(3) {
+      display: block; }
+    .logos :nth-child(4) {
+      display: block; }
+    .logos > * {
+      display: none; }
+  footer {
+    padding: 80px 16px 0;
+    display: flex; }
+    footer .content-wrapper {
+      display: flex;
+      flex-direction: row; }
+    footer .sm-footer {
+      flex: 1;
+      display: flex;
+      justify-content: space-between; }
+      footer .sm-footer > * {
+        flex: 1; }
+      footer .sm-footer .milu, footer .sm-footer .last-tweet {
+        margin-right: 15px; }
+      footer .sm-footer .quick-links, footer .sm-footer .download-app {
+        margin-left: 15px; }
+    footer .footer-section-description {
+      font-size: 16px;
+      line-height: 1.88; }
+    footer .footer-section-title {
+      font-size: 24px;
+      margin-bottom: 36px; }
+    footer .milu {
+      margin-bottom: 36px; }
+      footer .milu .milu-title {
+        margin-bottom: 36px;
+        font-size: 24px; }
+        footer .milu .milu-title::after {
+          bottom: -3px;
+          height: 13px; }
+    footer .quick-links {
+      margin-bottom: 36px; }
+      footer .quick-links ul li {
+        font-size: 16px;
+        line-height: 1.88;
+        margin-bottom: 10px; }
+    footer .last-tweet {
+      margin-bottom: 36px; }
+      footer .last-tweet .twitter-icon img {
+        margin-right: 12px; }
+      footer .last-tweet .twitter-wrapper .twitter-description {
+        font-size: 16px;
+        line-height: 1.88; }
+    footer .download-app .stores {
+      margin-bottom: 80px; }
+      footer .download-app .stores .google-play {
+        margin-bottom: 0; }
+    footer .download-app .social-media {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 71px; }
+      footer .download-app .social-media div {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: #fff;
+        border-radius: 16px;
+        margin-right: 16px; } }
 
 @media (min-width: 992px) {
   .content-wrapper {
     padding: 0 40px; }
   header {
-    height: 66px;
+    margin: 0 40px;
+    height: 88px;
     display: flex;
     justify-content: space-between; }
     header .logo {
@@ -320,7 +911,6 @@ footer {
             border: none; }
   .growing-button, .start-growing .growing-background .growing-description .growing-button-1, .start-your-website .start-now {
     top: 0;
-    margin: 56px 30px 0 0;
     padding: 16px 35.5px;
     border-radius: 24px;
     font-size: 12px;
@@ -336,7 +926,8 @@ footer {
     background: #fff; }
     .start-growing .growing-background {
       display: flex;
-      background: #fef3df; }
+      background: #fef3df;
+      padding: 0; }
       .start-growing .growing-background .growing-description {
         flex: 1;
         padding: 86px 92px 86px 44px; }
@@ -347,20 +938,8 @@ footer {
           font-stretch: normal;
           font-style: normal;
           margin-bottom: 36px; }
-          .start-growing .growing-background .growing-description .growing-title .growing-underline {
-            position: relative;
-            display: inline-block;
-            z-index: 3; }
-            .start-growing .growing-background .growing-description .growing-title .growing-underline::after {
-              z-index: -1;
-              content: '';
-              left: 0;
-              right: 0;
-              bottom: -6px;
-              position: absolute;
-              height: 30px;
-              background: #ffc050;
-              width: 100%; }
+          .start-growing .growing-background .growing-description .growing-title .growing-underline::after {
+            bottom: -2px; }
         .start-growing .growing-background .growing-description .growing-paragraph {
           font-size: 16px; }
       .start-growing .growing-background .growing-img {
@@ -372,80 +951,552 @@ footer {
         background-position: center; }
   .our-services {
     display: flex; }
-    .our-services :first-child, .our-services :nth-child(2) {
-      margin-right: 36px; }
+    .our-services .component-wrapper + .component-wrapper {
+      margin-left: 36px; }
   .about-us {
     display: flex;
-    flex-direction: row-reverse;
-    padding: 40px 0; }
+    flex-direction: row-reverse; }
+    .about-us .content-wrapper {
+      padding: 0; }
     .about-us .about-logo-wrapper {
       flex: 1;
-      margin-right: 18px; }
+      margin-left: 18px;
+      margin-bottom: 0;
+      display: flex;
+      align-items: center; }
     .about-us .about-content {
       flex: 1;
-      margin-left: 18px; }
+      margin-right: 18px; }
       .about-us .about-content .content-wrapper {
         padding: 50px; }
   .offer {
     display: flex;
-    flex-direction: row;
-    padding: 40px 0; }
+    flex-direction: row; }
     .offer .offer-logo-wrapper {
+      border: 1px solid #f2f2f2;
       flex: 1;
-      margin-right: 18px; }
+      margin-right: 18px;
+      margin-bottom: 0; }
     .offer .offer-description-wrapper {
       flex: 1;
-      margin-left: 18px; } }
+      margin-left: 18px;
+      display: flex;
+      align-items: center; }
+  .start-your-website {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 60px 50px; }
+    .start-your-website .start-title {
+      font-size: 32px;
+      margin-bottom: 0;
+      line-height: 1.5; }
+    .start-your-website .start-now {
+      width: auto;
+      margin: 0 !important; } }
 
 @media (min-width: 1200px) {
   .content-wrapper {
-    padding: 0 56px; } }
+    padding: 0 56px; }
+  .content-wrapper .component {
+    margin-bottom: 40px; }
+  header {
+    margin: 0 56px;
+    height: 88px; }
+  .start-growing {
+    margin-top: 16px;
+    padding: 16px;
+    margin-bottom: 16px; }
+    .start-growing .growing-background {
+      display: flex; }
+      .start-growing .growing-background .growing-description {
+        flex: 1;
+        padding: 134px 32px 134px 64px; }
+        .start-growing .growing-background .growing-description .growing-title {
+          font-size: 52px; }
+          .start-growing .growing-background .growing-description .growing-title .growing-underline::after {
+            bottom: -5px; }
+        .start-growing .growing-background .growing-description .growing-paragraph {
+          font-size: 18px;
+          padding-right: 0;
+          margin-bottom: 40px; }
+        .start-growing .growing-background .growing-description .growing-buttons .growing-button-1 {
+          display: block; }
+      .start-growing .growing-background .growing-img {
+        flex: 1;
+        display: flex;
+        background-image: url("/src/images/image-landing-3-money.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; }
+  .our-services .component-wrapper {
+    padding: 0; }
+  .our-services .content-wrapper {
+    padding: 40px 50px; }
+    .our-services .content-wrapper .services-img {
+      margin-bottom: 40px; }
+    .our-services .content-wrapper .services-title {
+      font-size: 24px;
+      margin-bottom: 20px; }
+    .our-services .content-wrapper .services-paragraph {
+      font-size: 16px;
+      margin-bottom: 40px;
+      line-height: 1.88; }
+    .our-services .content-wrapper .services-link {
+      font-size: 12px; }
+      .our-services .content-wrapper .services-link img {
+        margin-left: 4px; }
+  .about-us .component-wrapper {
+    padding: 50px 50px; }
+  .about-us .about-logo-wrapper .about-logo {
+    margin: 10px; }
+    .about-us .about-logo-wrapper .about-logo img {
+      object-fit: contain;
+      width: 100%; }
+  .about-us .about-content .about-title {
+    font-size: 32px;
+    margin-bottom: 36px; }
+  .about-us .about-content .progress-wrapper {
+    margin-bottom: 20px; }
+    .about-us .about-content .progress-wrapper .about-paragraph {
+      font-size: 14px; }
+      .about-us .about-content .progress-wrapper .about-paragraph p {
+        margin-bottom: 0; }
+    .about-us .about-content .progress-wrapper .progress-bar {
+      height: 8px;
+      border-radius: 4px; }
+      .about-us .about-content .progress-wrapper .progress-bar .progress1 {
+        height: 8px;
+        width: 90%; }
+      .about-us .about-content .progress-wrapper .progress-bar .progress2 {
+        height: 8px;
+        width: 80%; }
+      .about-us .about-content .progress-wrapper .progress-bar .progress3 {
+        height: 8px;
+        width: 70%; }
+  .offer .component-wrapper {
+    padding: 0; }
+    .offer .component-wrapper .content-wrapper {
+      padding: 50px 50px; }
+  .offer .offer-logo-wrapper {
+    display: flex;
+    align-items: center; }
+    .offer .offer-logo-wrapper .offer-logo-mobile {
+      width: 100%; }
+      .offer .offer-logo-wrapper .offer-logo-mobile img {
+        object-fit: contain;
+        width: 100%;
+        display: block;
+        margin: 0 auto; }
+  .offer .offer-description-wrapper {
+    border: 1px solid #f2f2f2; }
+    .offer .offer-description-wrapper .offer-title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 36px; }
+    .offer .offer-description-wrapper .offer-paragraph {
+      margin-bottom: 36px; }
+    .offer .offer-description-wrapper .offer-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      padding-bottom: 36px; }
+      .offer .offer-description-wrapper .offer-list > * {
+        padding-bottom: 12px;
+        display: flex;
+        align-items: center; }
+      .offer .offer-description-wrapper .offer-list :last-child {
+        padding-bottom: 0; }
+      .offer .offer-description-wrapper .offer-list img {
+        margin-right: 8px;
+        object-fit: contain; }
+  .design {
+    border: 1px solid #f2f2f2; }
+    .design .component-wrapper {
+      padding: 0;
+      display: flex; }
+      .design .component-wrapper .content-wrapper {
+        padding: 0 36px 0 36px;
+        flex: 1; }
+      .design .component-wrapper .last-design {
+        padding-bottom: 36px; }
+    .design .content-wrapper {
+      padding: 36px 36px;
+      padding-top: 0; }
+      .design .content-wrapper .design-logo {
+        display: flex;
+        align-items: center;
+        padding-top: 36px;
+        padding-bottom: 20px; }
+        .design .content-wrapper .design-logo .hello-mobile {
+          display: none; }
+        .design .content-wrapper .design-logo .hello-desktop {
+          display: flex; }
+        .design .content-wrapper .design-logo img {
+          padding: 0;
+          object-fit: contain;
+          width: 100%; }
+      .design .content-wrapper .design-description .design-title {
+        font-size: 22px;
+        line-height: 1.36; }
+      .design .content-wrapper .design-description .design-data {
+        font-size: 12px;
+        margin: 12px 0; }
+      .design .content-wrapper .design-description .design-text {
+        font-size: 16px; }
+      .design .content-wrapper .design-description .design-link {
+        font-size: 12px; }
+        .design .content-wrapper .design-description .design-link img {
+          margin-left: 4px; }
+  .jax-teller {
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: row; }
+    .jax-teller .jax-logo {
+      margin: 30px 0;
+      margin-right: 80px; }
+      .jax-teller .jax-logo img {
+        object-fit: contain;
+        width: 200px;
+        height: 200px; }
+    .jax-teller .jax-description {
+      font-size: 18px;
+      line-height: 1.67; }
+      .jax-teller .jax-description .jax-signature {
+        font-size: 14px;
+        line-height: 2.14; }
+  .logos {
+    padding: 0 46px; }
+    .logos img {
+      margin: auto;
+      padding: 40px 0; }
+    .logos :first-child {
+      display: block; }
+    .logos :nth-child(2) {
+      display: block; }
+    .logos :nth-child(3) {
+      display: block; }
+    .logos :nth-child(4) {
+      display: block; }
+    .logos :nth-child(5) {
+      display: block; }
+    .logos > * {
+      display: none; }
+  footer {
+    padding: 80px 16px 0;
+    display: flex; }
+    footer .content-wrapper {
+      display: flex;
+      flex-direction: row; }
+    footer .sm-footer {
+      flex: 1;
+      display: flex;
+      justify-content: space-between; }
+      footer .sm-footer > * {
+        flex: 1; }
+      footer .sm-footer .milu, footer .sm-footer .last-tweet {
+        margin-right: 15px; }
+      footer .sm-footer .quick-links, footer .sm-footer .download-app {
+        margin-left: 15px; }
+    footer .footer-section-description {
+      font-size: 16px;
+      line-height: 1.88; }
+    footer .footer-section-title {
+      font-size: 24px;
+      margin-bottom: 36px; }
+    footer .milu {
+      margin-bottom: 36px; }
+      footer .milu .milu-title {
+        margin-bottom: 36px;
+        font-size: 24px; }
+        footer .milu .milu-title::after {
+          bottom: -3px;
+          height: 13px; }
+    footer .quick-links {
+      margin-bottom: 36px; }
+      footer .quick-links ul li {
+        font-size: 16px;
+        line-height: 1.88;
+        margin-bottom: 10px; }
+    footer .last-tweet {
+      margin-bottom: 36px; }
+      footer .last-tweet .twitter-icon img {
+        margin-right: 12px; }
+      footer .last-tweet .twitter-wrapper .twitter-description {
+        font-size: 16px;
+        line-height: 1.88; }
+    footer .download-app .stores {
+      margin-bottom: 80px; }
+    footer .download-app .social-media {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 71px; }
+      footer .download-app .social-media div {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: #fff;
+        border-radius: 16px;
+        margin-right: 16px; } }
 
 @media (min-width: 1400px) {
   .content-wrapper {
     padding: 0 260px; }
+  .content-wrapper .component {
+    margin-bottom: 40px; }
   header {
+    width: 100%;
+    padding: 0 260px;
+    margin: 0;
     height: 88px; }
-    header .logo {
-      margin: 20px 0; }
-    header .desktop-nav ul li {
-      padding-right: 50px;
-      margin: auto 0; }
-    header .desktop-nav ul :last-child {
-      padding-right: 0; }
-      header .desktop-nav ul :last-child .button {
-        font-size: 12px;
-        line-height: 1;
-        padding: 12px 24px 12px 24px;
-        border-radius: 18px;
-        background-color: #6272c7;
-        color: #fff;
-        border: none; }
+  .header-scrolled {
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
+    background-color: #fcfcfc;
+    position: fixed;
+    top: 0;
+    z-index: 999; }
   .start-growing {
-    margin-top: 128px;
-    padding: 16px 0; }
+    margin-top: 16px;
+    padding: 16px;
+    margin-bottom: 16px; }
     .start-growing .growing-background {
-      margin: 0 16px; }
+      display: flex; }
       .start-growing .growing-background .growing-description {
+        flex: 1;
         padding: 144px 106px 142px 66px; }
         .start-growing .growing-background .growing-description .growing-title {
-          font-size: 60px;
-          margin-bottom: 36px; }
+          font-size: 52px; }
           .start-growing .growing-background .growing-description .growing-title .growing-underline::after {
-            content: '';
-            left: 0;
-            right: 0;
-            bottom: -6px;
-            height: 30px;
-            width: 100%; }
+            bottom: -7px; }
         .start-growing .growing-background .growing-description .growing-paragraph {
-          font-size: 20px; }
-        .start-growing .growing-background .growing-description .growing-button, .start-growing .growing-background .growing-description .growing-button-1, .start-growing .growing-background .growing-description .start-your-website .start-now, .start-your-website .start-growing .growing-background .growing-description .start-now {
-          margin: 56px 30px 0 2px;
-          padding: 16px 35.5px;
-          border-radius: 24px;
-          font-size: 12px; }
-          .start-growing .growing-background .growing-description .growing-button:hover, .start-growing .growing-background .growing-description .growing-button-1:hover, .start-growing .growing-background .growing-description .start-your-website .start-now:hover, .start-your-website .start-growing .growing-background .growing-description .start-now:hover {
-            top: -4px;
-            transition: 300;
-            box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16); } }
+          font-size: 18px;
+          padding-right: 0;
+          margin-bottom: 40px; }
+        .start-growing .growing-background .growing-description .growing-buttons .growing-button-1 {
+          display: block; }
+      .start-growing .growing-background .growing-img {
+        flex: 1;
+        display: flex;
+        background-image: url("/src/images/image-landing-3-money.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; }
+  .our-services .component-wrapper {
+    padding: 0; }
+  .our-services .content-wrapper {
+    padding: 40px 50px; }
+    .our-services .content-wrapper .services-img {
+      margin-bottom: 40px; }
+    .our-services .content-wrapper .services-title {
+      font-size: 24px;
+      margin-bottom: 20px; }
+    .our-services .content-wrapper .services-paragraph {
+      font-size: 16px;
+      margin-bottom: 40px;
+      line-height: 1.88; }
+    .our-services .content-wrapper .services-link {
+      font-size: 12px; }
+      .our-services .content-wrapper .services-link img {
+        margin-left: 4px; }
+  .about-us .component-wrapper {
+    padding: 50px 50px; }
+  .about-us .about-logo-wrapper .about-logo {
+    margin: 10px; }
+    .about-us .about-logo-wrapper .about-logo img {
+      object-fit: contain;
+      width: 100%; }
+  .about-us .about-content {
+    align-items: center;
+    display: flex; }
+    .about-us .about-content .about-title {
+      font-size: 32px;
+      margin-bottom: 36px; }
+    .about-us .about-content .progress-wrapper {
+      margin-bottom: 20px; }
+      .about-us .about-content .progress-wrapper .about-paragraph {
+        font-size: 14px; }
+        .about-us .about-content .progress-wrapper .about-paragraph p {
+          margin-bottom: 0; }
+      .about-us .about-content .progress-wrapper .progress-bar {
+        height: 8px;
+        border-radius: 4px; }
+        .about-us .about-content .progress-wrapper .progress-bar .progress1 {
+          height: 8px;
+          width: 90%; }
+        .about-us .about-content .progress-wrapper .progress-bar .progress2 {
+          height: 8px;
+          width: 80%; }
+        .about-us .about-content .progress-wrapper .progress-bar .progress3 {
+          height: 8px;
+          width: 70%; }
+  .offer .component-wrapper {
+    padding: 0; }
+    .offer .component-wrapper .content-wrapper {
+      padding: 50px 50px; }
+  .offer .offer-logo-wrapper {
+    display: flex;
+    align-items: center; }
+    .offer .offer-logo-wrapper .offer-logo-mobile {
+      width: 100%; }
+      .offer .offer-logo-wrapper .offer-logo-mobile img {
+        object-fit: contain;
+        width: 100%;
+        display: block;
+        margin: 0 auto; }
+  .offer .offer-description-wrapper {
+    border: 1px solid #f2f2f2; }
+    .offer .offer-description-wrapper .offer-title {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 36px; }
+    .offer .offer-description-wrapper .offer-paragraph {
+      margin-bottom: 36px; }
+    .offer .offer-description-wrapper .offer-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      padding-bottom: 36px; }
+      .offer .offer-description-wrapper .offer-list > * {
+        padding-bottom: 12px;
+        display: flex;
+        align-items: center; }
+      .offer .offer-description-wrapper .offer-list :last-child {
+        padding-bottom: 0; }
+      .offer .offer-description-wrapper .offer-list img {
+        margin-right: 8px;
+        object-fit: contain; }
+  .design {
+    border: 1px solid #f2f2f2; }
+    .design .component-wrapper {
+      padding: 0;
+      display: flex; }
+      .design .component-wrapper .content-wrapper {
+        padding: 0 36px 0 36px;
+        flex: 1; }
+      .design .component-wrapper .last-design {
+        padding-bottom: 36px; }
+    .design .content-wrapper {
+      padding: 36px 36px;
+      padding-top: 0; }
+      .design .content-wrapper .design-logo {
+        display: flex;
+        align-items: center;
+        padding-top: 36px;
+        padding-bottom: 20px; }
+        .design .content-wrapper .design-logo .hello-mobile {
+          display: none; }
+        .design .content-wrapper .design-logo .hello-desktop {
+          display: flex; }
+        .design .content-wrapper .design-logo img {
+          padding: 0;
+          object-fit: contain;
+          width: 100%; }
+      .design .content-wrapper .design-description .design-title {
+        font-size: 22px;
+        line-height: 1.36; }
+      .design .content-wrapper .design-description .design-data {
+        font-size: 12px;
+        margin: 12px 0; }
+      .design .content-wrapper .design-description .design-text {
+        font-size: 16px; }
+      .design .content-wrapper .design-description .design-link {
+        font-size: 12px; }
+        .design .content-wrapper .design-description .design-link img {
+          margin-left: 4px; }
+  .jax-teller {
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: row; }
+    .jax-teller .jax-logo {
+      margin: 30px 0;
+      margin-right: 80px; }
+      .jax-teller .jax-logo img {
+        object-fit: contain;
+        width: 200px;
+        height: 200px; }
+    .jax-teller .jax-description {
+      font-size: 18px;
+      line-height: 1.67; }
+      .jax-teller .jax-description .jax-signature {
+        font-size: 14px;
+        line-height: 2.14; }
+  .logos {
+    padding: 0 46px; }
+    .logos img {
+      margin: auto;
+      padding: 40px 0; }
+    .logos :first-child {
+      display: block; }
+    .logos :nth-child(2) {
+      display: block; }
+    .logos :nth-child(3) {
+      display: block; }
+    .logos :nth-child(4) {
+      display: block; }
+    .logos :nth-child(5) {
+      display: block; }
+    .logos > * {
+      display: none; }
+  footer {
+    padding: 80px 16px 0;
+    display: flex; }
+    footer .content-wrapper {
+      display: flex;
+      flex-direction: row; }
+    footer .sm-footer {
+      flex: 1;
+      display: flex;
+      justify-content: space-between; }
+      footer .sm-footer > * {
+        flex: 1; }
+      footer .sm-footer .milu, footer .sm-footer .last-tweet {
+        margin-right: 15px; }
+      footer .sm-footer .quick-links, footer .sm-footer .download-app {
+        margin-left: 15px; }
+    footer .footer-section-description {
+      font-size: 16px;
+      line-height: 1.88; }
+    footer .footer-section-title {
+      font-size: 24px;
+      margin-bottom: 36px; }
+    footer .milu {
+      margin-bottom: 36px; }
+      footer .milu .milu-title {
+        margin-bottom: 36px;
+        font-size: 24px; }
+        footer .milu .milu-title::after {
+          bottom: -3px;
+          height: 13px; }
+    footer .quick-links {
+      margin-bottom: 36px; }
+      footer .quick-links ul li {
+        font-size: 16px;
+        line-height: 1.88;
+        margin-bottom: 10px; }
+    footer .last-tweet {
+      margin-bottom: 36px; }
+      footer .last-tweet .twitter-icon img {
+        margin-right: 12px; }
+      footer .last-tweet .twitter-wrapper .twitter-description {
+        font-size: 16px;
+        line-height: 1.88; }
+    footer .download-app .stores {
+      margin-bottom: 80px; }
+    footer .download-app .social-media {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 71px; }
+      footer .download-app .social-media div {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: #fff;
+        border-radius: 16px;
+        margin-right: 16px; } }
