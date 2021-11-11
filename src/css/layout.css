@@ -918,7 +918,7 @@ footer {
       transition: 300ms;
       box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16); }
   .start-growing {
-    margin-top: 82px;
+    margin-top: 40px;
     padding: 16px;
     background: #fff; }
     .start-growing .growing-background {
