@@ -939,13 +939,6 @@ footer {
             bottom: -2px; }
         .start-growing .growing-background .growing-description .growing-paragraph {
           font-size: 16px; }
-      .start-growing .growing-background .growing-img {
-        flex: 1;
-        display: flex;
-        background-image: url("/src/images/image-landing-3-money.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
   .our-services {
     display: flex; }
     .our-services .component-wrapper + .component-wrapper {
@@ -1028,13 +1021,6 @@ footer {
           margin-bottom: 40px; }
         .start-growing .growing-background .growing-description .growing-buttons .growing-button-1 {
           display: block; }
-      .start-growing .growing-background .growing-img {
-        flex: 1;
-        display: flex;
-        background-image: url("/src/images/image-landing-3-money.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
   .our-services .component-wrapper {
     padding: 0; }
   .our-services .content-wrapper {
@@ -1283,13 +1269,6 @@ footer {
           margin-bottom: 40px; }
         .start-growing .growing-background .growing-description .growing-buttons .growing-button-1 {
           display: block; }
-      .start-growing .growing-background .growing-img {
-        flex: 1;
-        display: flex;
-        background-image: url("/src/images/image-landing-3-money.png");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
   .our-services .component-wrapper {
     padding: 0; }
   .our-services .content-wrapper {
