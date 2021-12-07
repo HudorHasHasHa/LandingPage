@@ -255,10 +255,7 @@ header{
 
 .offer{
   .component-wrapper{
-    padding: 0;
-    .content-wrapper{
-      padding: 30px 50px; 
-    }
+    padding: 30px 50px; 
   }
   .offer-logo-wrapper{
     margin-bottom: 16px;
@@ -657,10 +654,7 @@ footer{
   
   .offer{
     .component-wrapper{
-      padding: 0;
-      .content-wrapper{
-        padding: 50px 50px; 
-      }
+      padding: 50px 50px;
     }
     .offer-logo-wrapper{
       margin-bottom: 16px;
@@ -1028,12 +1022,6 @@ footer{
   }
   
   .offer{
-    .component-wrapper{
-      padding: 0;
-      .content-wrapper{
-        padding: 50px 50px; 
-      }
-    }
     .offer-logo-wrapper{
       margin-bottom: 16px;
       display: flex;
@@ -1415,6 +1403,9 @@ footer{
   .offer{
     display: flex;
     flex-direction: row;
+    .component-wrapper{
+      padding: 50px 50px;
+    }
     .offer-logo-wrapper{
       padding: 20px 20px;
       border: 1px solid #f2f2f2;
@@ -1584,10 +1575,7 @@ footer{
   
   .offer{
     .component-wrapper{
-      padding: 0;
-      .content-wrapper{
-        padding: 50px 50px; 
-      }
+      padding: 50px 50px; 
     }
     .offer-logo-wrapper{
       padding: 50px 50px;
@@ -1965,10 +1953,7 @@ footer{
   
   .offer{
     .component-wrapper{
-      padding: 0;
-      .content-wrapper{
-        padding: 50px 50px; 
-      }
+      padding: 50px 50px; 
     }
     .offer-logo-wrapper{
       padding: 50px 50px;
