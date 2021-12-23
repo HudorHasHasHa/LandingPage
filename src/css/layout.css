@@ -8,14 +8,16 @@ body {
     color: #333333; }
 
 header {
-  margin: 0 16px;
-  height: 66px;
-  display: flex;
-  justify-content: space-between; }
-  header .logo {
-    margin: 9px 0; }
+  margin: 20px 16px; }
+  header .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; }
   header .desktop-nav {
     display: none; }
+    header .desktop-nav li a {
+      padding: 4px; }
   header .mobile-nav {
     align-items: center;
     display: flex; }
@@ -32,7 +34,9 @@ header {
   position: relative;
   top: 0;
   text-transform: uppercase;
-  padding: 16px 35.5px;
+  padding: 16px 35px;
+  max-width: 150px;
+  width: 100%;
   border-radius: 24px;
   font-size: 12px;
   font-weight: bold;
@@ -50,27 +54,27 @@ header {
   .start-growing .growing-background {
     background: #fef3df;
     padding: 36px 24px; }
+    .start-growing .growing-background .growing-description .growing-title-wrapper {
+      width: fit-content;
+      position: relative;
+      display: inline-block;
+      z-index: 3; }
+      .start-growing .growing-background .growing-description .growing-title-wrapper::after {
+        z-index: -1;
+        content: '';
+        bottom: 20px;
+        position: absolute;
+        height: 22px;
+        background: #ffc050;
+        width: 100%; }
     .start-growing .growing-background .growing-description .growing-title {
+      width: fit-content;
       font-size: 40px;
       line-height: 1.3;
       font-weight: bold;
       font-stretch: normal;
       font-style: normal;
       margin-bottom: 22px; }
-      .start-growing .growing-background .growing-description .growing-title .growing-underline {
-        position: relative;
-        display: inline-block;
-        z-index: 3; }
-        .start-growing .growing-background .growing-description .growing-title .growing-underline::after {
-          z-index: -1;
-          content: '';
-          left: 0;
-          right: 0;
-          bottom: -3px;
-          position: absolute;
-          height: 22px;
-          background: #ffc050;
-          width: 100%; }
     .start-growing .growing-background .growing-description .growing-paragraph {
       font-size: 12px;
       margin-bottom: 20px; }
@@ -114,21 +118,22 @@ header {
     .our-services .content-wrapper .services-link img {
       margin-left: 4px; }
 
-.about-us .component-wrapper {
-  padding: 30px 50px; }
-
 .about-us .about-logo-wrapper {
   margin-bottom: 16px;
-  border: 1px solid #f2f2f2;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .about-us .about-logo-wrapper .about-logo img {
-    object-fit: contain;
-    width: 100%; }
+  border: 1px solid #f2f2f2; }
+  .about-us .about-logo-wrapper .about-logo-mobile {
+    display: flex;
+    align-items: center; }
+    .about-us .about-logo-wrapper .about-logo-mobile img {
+      object-fit: contain;
+      width: 100%;
+      display: block;
+      margin: 0 auto; }
 
 .about-us .about-content {
   border: 1px solid #f2f2f2; }
+  .about-us .about-content .about-content-wrapper {
+    padding: 30px 50px; }
   .about-us .about-content .about-title {
     font-size: 32px;
     font-weight: bold;
@@ -162,15 +167,12 @@ header {
         background: #ffc050; }
 
 .offer .component-wrapper {
-  padding: 0; }
-  .offer .component-wrapper .content-wrapper {
-    padding: 30px 50px; }
+  padding: 30px 50px; }
 
 .offer .offer-logo-wrapper {
   margin-bottom: 16px;
   border: 1px solid #f2f2f2; }
   .offer .offer-logo-wrapper .offer-logo-mobile {
-    padding: 24px;
     display: flex;
     align-items: center; }
     .offer .offer-logo-wrapper .offer-logo-mobile img {
@@ -205,19 +207,17 @@ header {
 .design {
   border: 1px solid #f2f2f2; }
   .design .component-wrapper {
-    padding: 0; }
+    padding: 36px; }
     .design .component-wrapper .content-wrapper {
-      padding: 36px 36px 0 36px; }
-    .design .component-wrapper .last-design {
+      padding: 0;
       padding-bottom: 36px; }
+    .design .component-wrapper .last-design {
+      padding-bottom: 0; }
   .design .content-wrapper {
-    padding: 36px 36px;
     padding-top: 0; }
     .design .content-wrapper .design-logo {
       display: flex;
-      justify-content: flex-end;
-      padding-top: 36px;
-      padding-bottom: 20px; }
+      justify-content: flex-end; }
       .design .content-wrapper .design-logo .hello-mobile {
         display: flex; }
       .design .content-wrapper .design-logo .hello-desktop {
@@ -242,15 +242,22 @@ header {
     .design .content-wrapper .design-description .design-text {
       font-size: 16px; }
     .design .content-wrapper .design-description .design-link {
+      height: 20px;
+      position: relative;
       font-size: 12px;
+      line-height: 20px;
       font-weight: bold;
       text-decoration: none;
       color: #333333;
       display: flex;
       align-items: center;
+      justify-content: flex-start;
       text-transform: uppercase; }
-      .design .content-wrapper .design-description .design-link img {
-        margin-left: 4px; }
+      .design .content-wrapper .design-description .design-link::after {
+        content: "";
+        background: url(../images/icon-chevron-right.png) no-repeat center center;
+        width: 20px;
+        height: 20px; }
 
 .jax-teller {
   padding: 40px 60px;
@@ -373,23 +380,17 @@ footer {
     padding: 0 24px; }
     .content-wrapper .component {
       margin-bottom: 32px; }
-  .start-growing {
-    margin-top: 16px;
-    padding: 16px;
-    margin-bottom: 16px; }
-    .start-growing .growing-background {
-      padding: 44px 166px 44px 34px; }
-      .start-growing .growing-background .growing-description .growing-title {
-        font-size: 40px; }
-      .start-growing .growing-background .growing-description .growing-paragraph {
-        font-size: 12px;
-        margin-bottom: 20px; }
-      .start-growing .growing-background .growing-description .growing-buttons .growing-button, .start-growing .growing-background .growing-description .growing-buttons .growing-button-1, .start-growing .growing-background .growing-description .growing-buttons .start-your-website .start-now, .start-your-website .start-growing .growing-background .growing-description .growing-buttons .start-now {
-        margin-right: 20px; }
-      .start-growing .growing-background .growing-description .growing-buttons .growing-button-1 {
-        display: block; }
-      .start-growing .growing-background .growing-img {
-        display: none; }
+  .start-growing .growing-background {
+    padding: 44px 166px 44px 34px; }
+    .start-growing .growing-background .growing-description .growing-title {
+      font-size: 40px; }
+    .start-growing .growing-background .growing-description .growing-paragraph {
+      font-size: 12px;
+      margin-bottom: 20px; }
+    .start-growing .growing-background .growing-description .growing-buttons .growing-button, .start-growing .growing-background .growing-description .growing-buttons .growing-button-1, .start-growing .growing-background .growing-description .growing-buttons .start-your-website .start-now, .start-your-website .start-growing .growing-background .growing-description .growing-buttons .start-now {
+      margin-right: 20px; }
+    .start-growing .growing-background .growing-description .growing-buttons .growing-button-1 {
+      display: block; }
   .our-services .component-wrapper {
     padding: 0;
     margin-bottom: 16px; }
@@ -410,8 +411,6 @@ footer {
       font-size: 12px; }
       .our-services .content-wrapper .services-link img {
         margin-left: 4px; }
-  .about-us .component-wrapper {
-    padding: 50px 50px; }
   .about-us .about-logo-wrapper {
     margin-bottom: 16px;
     border: 1px solid #f2f2f2; }
@@ -422,6 +421,8 @@ footer {
         width: 100%; }
   .about-us .about-content {
     border: 1px solid #f2f2f2; }
+    .about-us .about-content .about-content-wrapper {
+      padding: 50px; }
     .about-us .about-content .about-title {
       font-size: 32px;
       font-weight: bold;
@@ -453,9 +454,7 @@ footer {
           width: 70%;
           background: #ffc050; }
   .offer .component-wrapper {
-    padding: 0; }
-    .offer .component-wrapper .content-wrapper {
-      padding: 50px 50px; }
+    padding: 50px 50px; }
   .offer .offer-logo-wrapper {
     margin-bottom: 16px; }
     .offer .offer-logo-wrapper .offer-logo-mobile {
@@ -491,19 +490,12 @@ footer {
         object-fit: contain; }
   .design {
     border: 1px solid #f2f2f2; }
-    .design .component-wrapper {
-      padding: 0; }
-      .design .component-wrapper .content-wrapper {
-        padding: 0 36px 0 36px; }
-      .design .component-wrapper .last-design {
-        padding-bottom: 36px; }
     .design .content-wrapper {
       padding: 36px 36px;
       padding-top: 0; }
       .design .content-wrapper .design-logo {
         display: flex;
         justify-content: flex-end;
-        padding-top: 36px;
         padding-bottom: 20px; }
         .design .content-wrapper .design-logo img {
           padding: 0;
@@ -580,10 +572,6 @@ footer {
           height: 13px; }
     footer .quick-links {
       margin-bottom: 36px; }
-      footer .quick-links ul li {
-        font-size: 16px;
-        line-height: 1.88;
-        margin-bottom: 10px; }
     footer .last-tweet {
       margin-bottom: 36px; }
       footer .last-tweet .twitter-icon img {
@@ -616,35 +604,32 @@ footer {
     .content-wrapper .component {
       margin-bottom: 32px; }
   header {
-    margin: 0 24px; }
-  .start-growing {
-    margin-top: 16px;
-    padding: 16px;
-    margin-bottom: 16px; }
-    .start-growing .growing-background {
-      padding: 36px 0 36px 34px;
-      display: flex; }
-      .start-growing .growing-background .growing-description {
-        flex: 1; }
-        .start-growing .growing-background .growing-description .growing-title {
-          font-size: 40px; }
-          .start-growing .growing-background .growing-description .growing-title .growing-underline::after {
-            bottom: -2px; }
-        .start-growing .growing-background .growing-description .growing-paragraph {
-          font-size: 12px;
-          padding-right: 72px;
-          margin-bottom: 20px; }
-        .start-growing .growing-background .growing-description .growing-buttons .growing-button, .start-growing .growing-background .growing-description .growing-buttons .growing-button-1, .start-growing .growing-background .growing-description .growing-buttons .start-your-website .start-now, .start-your-website .start-growing .growing-background .growing-description .growing-buttons .start-now {
-          margin-right: 30px; }
-        .start-growing .growing-background .growing-description .growing-buttons .growing-button-1 {
-          display: block; }
-      .start-growing .growing-background .growing-img {
-        flex: 1;
-        display: flex;
-        background-image: url(https://github.com/HudorHasHasHa/LandingPage/blob/master/src/images/image-landing-3-money.png?raw=true);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center; }
+    margin: 20px 24px; }
+  .start-growing .growing-background {
+    display: flex;
+    padding: 0; }
+    .start-growing .growing-background .growing-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 34px;
+      width: 50%; }
+      .start-growing .growing-background .growing-description .growing-paragraph {
+        font-size: 12px;
+        padding-right: 72px;
+        margin-bottom: 30px; }
+      .start-growing .growing-background .growing-description .growing-buttons .growing-button, .start-growing .growing-background .growing-description .growing-buttons .growing-button-1, .start-growing .growing-background .growing-description .growing-buttons .start-your-website .start-now, .start-your-website .start-growing .growing-background .growing-description .growing-buttons .start-now {
+        margin-right: 30px; }
+      .start-growing .growing-background .growing-description .growing-buttons .growing-button-1 {
+        display: block; }
+    .start-growing .growing-background .growing-img {
+      width: 50%;
+      display: flex;
+      margin: 48px 0; }
+      .start-growing .growing-background .growing-img img {
+        object-fit: fill;
+        height: 100%;
+        width: 100%; }
   .our-services .component-wrapper {
     margin-bottom: 0; }
   .our-services .content-wrapper {
@@ -662,15 +647,18 @@ footer {
       font-size: 12px; }
       .our-services .content-wrapper .services-link img {
         margin-left: 4px; }
-  .about-us .component-wrapper {
-    padding: 50px 50px; }
   .about-us .about-logo-wrapper {
-    margin-bottom: 16px; }
-    .about-us .about-logo-wrapper .about-logo {
-      margin: 10px; }
-      .about-us .about-logo-wrapper .about-logo img {
+    margin-bottom: 16px;
+    border: 1px solid #f2f2f2; }
+    .about-us .about-logo-wrapper .about-logo-mobile {
+      padding: 24px;
+      display: flex;
+      align-items: center; }
+      .about-us .about-logo-wrapper .about-logo-mobile img {
         object-fit: contain;
-        width: 100%; }
+        width: 100%;
+        display: block;
+        margin: 0 auto; }
   .about-us .about-content .about-title {
     font-size: 32px;
     margin-bottom: 36px; }
@@ -692,10 +680,6 @@ footer {
       .about-us .about-content .progress-wrapper .progress-bar .progress3 {
         height: 8px;
         width: 70%; }
-  .offer .component-wrapper {
-    padding: 0; }
-    .offer .component-wrapper .content-wrapper {
-      padding: 50px 50px; }
   .offer .offer-logo-wrapper {
     margin-bottom: 16px;
     display: flex;
@@ -731,21 +715,14 @@ footer {
         object-fit: contain; }
   .design {
     border: 1px solid #f2f2f2; }
-    .design .component-wrapper {
-      padding: 0;
-      display: flex; }
-      .design .component-wrapper .content-wrapper {
-        padding: 0 36px 0 36px;
-        flex: 1; }
-      .design .component-wrapper .last-design {
-        padding-bottom: 36px; }
+    .design .component-wrapper .content-wrapper {
+      flex: 1; }
     .design .content-wrapper {
       padding: 36px 36px;
       padding-top: 0; }
       .design .content-wrapper .design-logo {
         display: flex;
         align-items: center;
-        padding-top: 36px;
         padding-bottom: 20px; }
         .design .content-wrapper .design-logo .hello-mobile {
           display: none; }
@@ -768,16 +745,11 @@ footer {
         .design .content-wrapper .design-description .design-link img {
           margin-left: 4px; }
   .jax-teller {
-    padding: 40px 60px;
-    display: flex;
-    flex-direction: row; }
-    .jax-teller .jax-logo {
-      margin: 30px 0;
-      margin-right: 80px; }
-      .jax-teller .jax-logo img {
-        object-fit: contain;
-        width: 200px;
-        height: 200px; }
+    padding: 40px 60px; }
+    .jax-teller .jax-logo img {
+      object-fit: contain;
+      width: 80px;
+      height: 80px; }
     .jax-teller .jax-description {
       font-size: 18px;
       line-height: 1.67; }
@@ -826,12 +798,6 @@ footer {
         footer .milu .milu-title::after {
           bottom: -3px;
           height: 13px; }
-    footer .quick-links {
-      margin-bottom: 36px; }
-      footer .quick-links ul li {
-        font-size: 16px;
-        line-height: 1.88;
-        margin-bottom: 10px; }
     footer .last-tweet {
       margin-bottom: 36px; }
       footer .last-tweet .twitter-icon img {
@@ -862,18 +828,16 @@ footer {
   .content-wrapper {
     padding: 0 40px; }
   header {
-    margin: 0 40px;
-    height: 88px;
+    margin: 20px 40px;
     display: flex;
     justify-content: space-between; }
-    header .logo {
-      margin: 20px 0; }
     header .mobile-nav {
       display: none; }
     header .desktop-nav {
       flex: 1;
       display: flex;
-      flex-direction: row-reverse; }
+      flex-direction: row;
+      justify-content: end; }
       header .desktop-nav ul {
         list-style: none;
         padding: 0;
@@ -881,31 +845,30 @@ footer {
         display: flex;
         align-items: center; }
         header .desktop-nav ul li {
-          padding-right: 50px;
           display: inline-block;
           text-transform: uppercase;
           margin: auto 0; }
           header .desktop-nav ul li a {
+            padding: 1rem 1.2rem;
             font-family: OpenSans-Bold;
             text-decoration: none;
             color: #858585; }
             header .desktop-nav ul li a:hover {
               color: #333333;
               transition: 300ms; }
-        header .desktop-nav ul :last-child {
-          padding-right: 0; }
-          header .desktop-nav ul :last-child .button {
-            font-size: 12px;
-            font-weight: bold;
-            font-stretch: normal;
-            font-style: normal;
-            line-height: 1;
-            letter-spacing: normal;
-            padding: 12px 24px 12px 24px;
-            border-radius: 18px;
-            background-color: #6272c7;
-            color: #fff;
-            border: none; }
+      header .desktop-nav .button {
+        align-self: center;
+        font-size: 12px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1;
+        letter-spacing: normal;
+        padding: 12px 24px 12px 24px;
+        border-radius: 18px;
+        background-color: #6272c7;
+        color: #fff;
+        border: none; }
   .growing-button, .start-growing .growing-background .growing-description .growing-button-1, .start-your-website .start-now {
     top: 0;
     padding: 16px 35.5px;
@@ -918,16 +881,16 @@ footer {
       transition: 300ms;
       box-shadow: 0 16px 32px 0 rgba(0, 0, 0, 0.16); }
   .start-growing {
-    margin-top: 40px;
-    padding: 16px;
-    background: #fff; }
+    margin-top: 40px; }
     .start-growing .growing-background {
       display: flex;
       background: #fef3df;
       padding: 0; }
       .start-growing .growing-background .growing-description {
-        flex: 1;
-        padding: 86px 92px 86px 44px; }
+        margin: 0 4rem; }
+        .start-growing .growing-background .growing-description .growing-title-wrapper::after {
+          bottom: 25px;
+          height: 26px; }
         .start-growing .growing-background .growing-description .growing-title {
           font-size: 40px;
           line-height: 52px;
@@ -935,8 +898,6 @@ footer {
           font-stretch: normal;
           font-style: normal;
           margin-bottom: 36px; }
-          .start-growing .growing-background .growing-description .growing-title .growing-underline::after {
-            bottom: -2px; }
         .start-growing .growing-background .growing-description .growing-paragraph {
           font-size: 16px; }
   .our-services {
@@ -957,6 +918,8 @@ footer {
       margin-bottom: 0;
       display: flex;
       align-items: center; }
+      .about-us .about-logo-wrapper .about-logo-mobile {
+        padding: 50px; }
     .about-us .about-content {
       flex: 1;
       margin-right: 18px; }
@@ -965,16 +928,44 @@ footer {
   .offer {
     display: flex;
     flex-direction: row; }
+    .offer .component-wrapper {
+      padding: 0; }
+    .offer .offer-content-wrapper {
+      padding: 50px; }
     .offer .offer-logo-wrapper {
+      padding: 0;
       border: 1px solid #f2f2f2;
       flex: 1;
       margin-right: 18px;
       margin-bottom: 0; }
+      .offer .offer-logo-wrapper .offer-logo-mobile {
+        padding: 50px; }
     .offer .offer-description-wrapper {
       flex: 1;
       margin-left: 18px;
       display: flex;
       align-items: center; }
+  .design .component-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 36px; }
+    .design .component-wrapper > :first-child {
+      padding-right: 36px; }
+    .design .component-wrapper > :last-child {
+      padding-left: 36px; }
+    .design .component-wrapper .content-wrapper {
+      padding-bottom: 0; }
+      .design .component-wrapper .content-wrapper .design-logo {
+        padding-top: 0; }
+  .jax-teller {
+    display: flex;
+    flex-direction: row; }
+    .jax-teller .jax-logo {
+      margin-right: 80px;
+      margin-bottom: 0; }
+      .jax-teller .jax-logo img {
+        height: 200px;
+        width: 200px; }
   .start-your-website {
     display: flex;
     align-items: center;
@@ -1000,8 +991,7 @@ footer {
   .content-wrapper .component {
     margin-bottom: 40px; }
   header {
-    margin: 0 56px;
-    height: 88px; }
+    margin: 20px 56px; }
   .start-growing {
     margin-top: 16px;
     padding: 16px;
@@ -1009,8 +999,7 @@ footer {
     .start-growing .growing-background {
       display: flex; }
       .start-growing .growing-background .growing-description {
-        flex: 1;
-        padding: 134px 32px 134px 64px; }
+        flex: 1; }
         .start-growing .growing-background .growing-description .growing-title {
           font-size: 52px; }
           .start-growing .growing-background .growing-description .growing-title .growing-underline::after {
@@ -1038,8 +1027,6 @@ footer {
       font-size: 12px; }
       .our-services .content-wrapper .services-link img {
         margin-left: 4px; }
-  .about-us .component-wrapper {
-    padding: 50px 50px; }
   .about-us .about-logo-wrapper .about-logo {
     margin: 10px; }
     .about-us .about-logo-wrapper .about-logo img {
@@ -1067,10 +1054,9 @@ footer {
         height: 8px;
         width: 70%; }
   .offer .component-wrapper {
-    padding: 0; }
-    .offer .component-wrapper .content-wrapper {
-      padding: 50px 50px; }
+    padding: 50px 50px; }
   .offer .offer-logo-wrapper {
+    padding: 50px 50px;
     display: flex;
     align-items: center; }
     .offer .offer-logo-wrapper .offer-logo-mobile {
@@ -1105,20 +1091,15 @@ footer {
   .design {
     border: 1px solid #f2f2f2; }
     .design .component-wrapper {
-      padding: 0;
       display: flex; }
       .design .component-wrapper .content-wrapper {
-        padding: 0 36px 0 36px;
         flex: 1; }
-      .design .component-wrapper .last-design {
-        padding-bottom: 36px; }
     .design .content-wrapper {
       padding: 36px 36px;
       padding-top: 0; }
       .design .content-wrapper .design-logo {
         display: flex;
         align-items: center;
-        padding-top: 36px;
         padding-bottom: 20px; }
         .design .content-wrapper .design-logo .hello-mobile {
           display: none; }
@@ -1141,16 +1122,13 @@ footer {
         .design .content-wrapper .design-description .design-link img {
           margin-left: 4px; }
   .jax-teller {
-    padding: 40px 60px;
+    padding: 60px;
     display: flex;
     flex-direction: row; }
-    .jax-teller .jax-logo {
-      margin: 30px 0;
-      margin-right: 80px; }
-      .jax-teller .jax-logo img {
-        object-fit: contain;
-        width: 200px;
-        height: 200px; }
+    .jax-teller .jax-logo img {
+      object-fit: contain;
+      width: 200px;
+      height: 200px; }
     .jax-teller .jax-description {
       font-size: 18px;
       line-height: 1.67; }
@@ -1204,12 +1182,6 @@ footer {
         footer .milu .milu-title::after {
           bottom: -3px;
           height: 13px; }
-    footer .quick-links {
-      margin-bottom: 36px; }
-      footer .quick-links ul li {
-        font-size: 16px;
-        line-height: 1.88;
-        margin-bottom: 10px; }
     footer .last-tweet {
       margin-bottom: 36px; }
       footer .last-tweet .twitter-icon img {
@@ -1236,39 +1208,34 @@ footer {
 
 @media (min-width: 1400px) {
   .content-wrapper {
-    padding: 0 260px; }
+    padding: 0; }
+    .content-wrapper > * {
+      margin: 0 auto;
+      max-width: 1400px; }
   .content-wrapper .component {
     margin-bottom: 40px; }
   header {
-    width: 100%;
-    padding: 0 260px;
-    margin: 0;
-    height: 88px; }
+    padding: 20px 0;
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; }
+    header .header-content {
+      max-width: 1400px; }
   .header-scrolled {
+    width: 100%;
+    margin: 0 auto;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.1);
     background-color: #fcfcfc;
     position: fixed;
     top: 0;
     z-index: 999; }
-  .start-growing {
-    margin-top: 16px;
-    padding: 16px;
-    margin-bottom: 16px; }
-    .start-growing .growing-background {
-      display: flex; }
-      .start-growing .growing-background .growing-description {
-        flex: 1;
-        padding: 144px 106px 142px 66px; }
-        .start-growing .growing-background .growing-description .growing-title {
-          font-size: 52px; }
-          .start-growing .growing-background .growing-description .growing-title .growing-underline::after {
-            bottom: -7px; }
-        .start-growing .growing-background .growing-description .growing-paragraph {
-          font-size: 18px;
-          padding-right: 0;
-          margin-bottom: 40px; }
-        .start-growing .growing-background .growing-description .growing-buttons .growing-button-1 {
-          display: block; }
+  .start-growing .growing-background .growing-description {
+    flex: 1; }
+    .start-growing .growing-background .growing-description .growing-title {
+      font-size: 52px; }
+      .start-growing .growing-background .growing-description .growing-title .growing-underline::after {
+        bottom: -7px; }
   .our-services .component-wrapper {
     padding: 0; }
   .our-services .content-wrapper {
@@ -1286,8 +1253,6 @@ footer {
       font-size: 12px; }
       .our-services .content-wrapper .services-link img {
         margin-left: 4px; }
-  .about-us .component-wrapper {
-    padding: 50px 50px; }
   .about-us .about-logo-wrapper {
     display: flex;
     align-items: center; }
@@ -1321,10 +1286,9 @@ footer {
           height: 8px;
           width: 70%; }
   .offer .component-wrapper {
-    padding: 0; }
-    .offer .component-wrapper .content-wrapper {
-      padding: 50px 50px; }
+    padding: 50px 50px; }
   .offer .offer-logo-wrapper {
+    padding: 50px 50px;
     display: flex;
     align-items: center; }
     .offer .offer-logo-wrapper .offer-logo-mobile {
@@ -1359,20 +1323,15 @@ footer {
   .design {
     border: 1px solid #f2f2f2; }
     .design .component-wrapper {
-      padding: 0;
       display: flex; }
       .design .component-wrapper .content-wrapper {
-        padding: 0 36px 0 36px;
         flex: 1; }
-      .design .component-wrapper .last-design {
-        padding-bottom: 36px; }
     .design .content-wrapper {
       padding: 36px 36px;
       padding-top: 0; }
       .design .content-wrapper .design-logo {
         display: flex;
         align-items: center;
-        padding-top: 36px;
         padding-bottom: 20px; }
         .design .content-wrapper .design-logo .hello-mobile {
           display: none; }
@@ -1395,16 +1354,13 @@ footer {
         .design .content-wrapper .design-description .design-link img {
           margin-left: 4px; }
   .jax-teller {
-    padding: 40px 60px;
+    padding: 60px 160px;
     display: flex;
     flex-direction: row; }
-    .jax-teller .jax-logo {
-      margin: 30px 0;
-      margin-right: 80px; }
-      .jax-teller .jax-logo img {
-        object-fit: contain;
-        width: 200px;
-        height: 200px; }
+    .jax-teller .jax-logo img {
+      object-fit: contain;
+      width: 200px;
+      height: 200px; }
     .jax-teller .jax-description {
       font-size: 18px;
       line-height: 1.67; }
@@ -1433,7 +1389,9 @@ footer {
     display: flex; }
     footer .content-wrapper {
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      max-width: 1400px;
+      margin: 0 auto; }
     footer .sm-footer {
       flex: 1;
       display: flex;
@@ -1458,12 +1416,6 @@ footer {
         footer .milu .milu-title::after {
           bottom: -3px;
           height: 13px; }
-    footer .quick-links {
-      margin-bottom: 36px; }
-      footer .quick-links ul li {
-        font-size: 16px;
-        line-height: 1.88;
-        margin-bottom: 10px; }
     footer .last-tweet {
       margin-bottom: 36px; }
       footer .last-tweet .twitter-icon img {

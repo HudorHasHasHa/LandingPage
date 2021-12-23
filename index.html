@@ -9,46 +9,48 @@
   <link rel="stylesheet" href="./src/css/layout.css">
 </head>
 <body>
-  <header class="component">
-    <div class="logo">
-      <img src="./src/images/icon-logo.png" alt="img">
+  <header >
+    <div class="header-content">
+      <div class="logo">
+        <img src="./src/images/icon-logo.png" alt="img">
+      </div>
+      <nav class="desktop-nav">
+        <ul class="">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Pages</a>
+          </li>
+          <li>
+            <a href="#">Portfolio</a>
+          </li>
+          <li>
+            <a href="#">Shop</a>
+          </li>
+          <li>
+            <a href="#">Blog</a>
+          </li>
+          <li>
+            <a href="#">Elements</a>
+          </li>
+        </ul>
+        <button class="button">Start now</button>
+      </nav>
+      <nav class="mobile-nav">
+        <button class="hamburger">
+          <img src="./src/images/icon-menu.png" alt="oops"/>
+        </button>
+      </nav>
     </div>
-    <nav class="desktop-nav">
-      <ul class="">
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">Pages</a>
-        </li>
-        <li>
-          <a href="#">Portfolio</a>
-        </li>
-        <li>
-          <a href="#">Shop</a>
-        </li>
-        <li>
-          <a href="#">Blog</a>
-        </li>
-        <li>
-          <a href="#">Elements</a>
-        </li>
-        <li>
-          <button class="button">Start now</button>
-        </li>
-      </ul>
-    </nav>
-    <nav class="mobile-nav">
-      <button class="hamburger">
-        <img src="./src/images/icon-menu.png" alt="">
-      </button>
-    </nav>
   </header>
   <div class="content-wrapper">
     <section class="start-growing component">
       <div class="growing-background">
         <div class="growing-description ">
-          <h3 class="growing-title">Start <br/> <div class="growing-underline">Growing</div></h3>
+          <div class="growing-title-wrapper">
+            <h3 class="growing-title">Start <br/>Growing</h3>
+          </div>
           <p class="growing-paragraph">Lorem ipsum dolor sit amet, conse ctetuer adipiscing elit, sed diam nonum nibhie euismod.
           </p>
           <div class="growing-buttons">
@@ -57,43 +59,43 @@
           </div>
         </div>
         <div class="growing-img ">
-          <!-- <img src="./src/images/image-landing-3-money.png" srcset="./src/images/image-landing-3-desktop@2x.png 2x,./src/images//image-landing-3-desktop@3x.png 3x" alt=""> -->
+          <img src="./src/images/image-landing-3-money.png" srcset="./src/images/image-landing-3-money@2x.png 2x,./src/images//image-landing-3-money@3x.png 3x" alt="oops"/>
         </div>
       </div>
     </section>
     <section class="our-services component">
       <div class="component-wrapper">
         <div class="content-wrapper">
-          <img class="services-img" src="./src/images/clipart-landing-3-1.png"/>
+          <img class="services-img" src="./src/images/clipart-landing-3-1.png" alt="oops"/>
           <h3 class="services-title">Data Protection</h3>
           <p class="services-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a class="services-link">learn more <img src="./src/images/Chevron-right.png" alt=""></a>
+          <a class="services-link">learn more <img src="./src/images/Chevron-right.png" alt="oops"/></a>
         </div>
         </div>
       <div class="component-wrapper">
         <div class="content-wrapper">
-          <img class="services-img" src="./src/images/clipart-landing-3-2.png"/>
+          <img class="services-img" src="./src/images/clipart-landing-3-2.png" alt="oops"/>
           <h3 class="services-title">Market Analysis</h3>
           <p class="services-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a class="services-link">learn more <img src="./src/images/Chevron-right.png" alt=""></a>
+          <a class="services-link">learn more <img src="./src/images/Chevron-right.png" alt="oops"/></a>
         </div>
       </div>
       <div class="component-wrapper">
         <div class="content-wrapper">
-          <img class="services-img" src="./src/images/clipart-landing-3-3.png"/>
+          <img class="services-img" src="./src/images/clipart-landing-3-3.png" alt="oops"/>
           <h3 class="services-title">App Development</h3>
           <p class="services-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a class="services-link">learn more <img src="./src/images/Chevron-right.png" alt=""></a>
+          <a class="services-link">learn more <img src="./src/images/Chevron-right.png" alt="oops"/></a>
         </div>
       </div>
     </section>
     <section class="about-us component">
-      <div class="component-wrapper about-logo-wrapper">
-        <div class="about-logo">
-          <img src="./src/images/image-landing-3-player.png" srcset="./src/images/image-landing-3-player@2x.png" alt="">
+      <div class="about-logo-wrapper">
+        <div class="about-logo-mobile">
+          <img src="./src/images/image-landing-3-player.png" srcset="./src/images/image-landing-3-player@2x.png" alt="oops"/>
         </div>
       </div>
-      <div class="component-wrapper about-content">
+      <div class="about-content">
         <div class="about-content-wrapper">
           <h3 class="about-title">What We Do</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis labore cum eos voluptates enim commodi omnis soluta, numquam dignissimos!</p>
@@ -128,31 +130,31 @@
       </div>
     </section>
     <section class="offer component">
-      <div class="component-wrapper offer-logo-wrapper">
+      <div class="offer-logo-wrapper">
         <div class="offer-logo-mobile">
           <div class="offer-logo"></div>
-          <img src="./src/images/image-landing-3-desktop.png" srcset="./src/images/image-landing-3-desktop.png 1x, ./src/images/image-landing-3-desktop@2x.png 2x, ./src/images/image-landing-3-desktop@3x.png 3x" alt="">
+          <img src="./src/images/image-landing-3-desktop.png" srcset="./src/images/image-landing-3-desktop.png 1x, ./src/images/image-landing-3-desktop@2x.png 2x, ./src/images/image-landing-3-desktop@3x.png 3x" alt="oops"/>
         </div>
       </div>
       <div class="component-wrapper offer-description-wrapper">
-        <div class="content-wrapper">
+        <div class="offer-content-wrapper">
           <h3 class="offer-title">What We Offer</h3>
           <p class="offer-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  </p>
             <ul class="offer-list">
             <li>
-              <img src="./src/images/icon-checkmark.png"/>
+              <img src="./src/images/icon-checkmark.png" alt="oops"/>
               <span>Web Expertise</span>
             </li>
             <li>
-              <img src="./src/images/icon-checkmark.png"/>
+              <img src="./src/images/icon-checkmark.png" alt="oops"/>
               <span>Branding</span>
             </li>
             <li>
-              <img src="./src/images/icon-checkmark.png"/>
+              <img src="./src/images/icon-checkmark.png" alt="oops"/>
               <span>Design Illustration</span>
             </li>
             <li>
-              <img src="./src/images/icon-checkmark.png"/>
+              <img src="./src/images/icon-checkmark.png" alt="oops"/>
               <span>Data Analysis</span>
             </li>
           </ul>
@@ -164,53 +166,53 @@
       <div class="component-wrapper">
         <div class="content-wrapper">
           <div class="design-logo">
-            <img class="hello-mobile" src="./src/images/image-1-cleared.png" srcset=""alt="">
-            <img class="hello-desktop" src="./src/images/image-1.png" srcset=""alt="">
+            <img class="hello-mobile" src="./src/images/image-1-cleared.png" alt="oops"/>
+            <img class="hello-desktop" src="./src/images/image-1.png" alt="oops"/>
           </div>
           <div class="design-description">
             <h3 class="design-title">Hello world!</h3>
             <span class="design-data">April 29, 2019 • standard</span>
             <p class="design-text">Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Fusce commodo aliquam arcu. In ac felis...</p>
-            <a class="design-link">read more<img src="src/images/icon-chevron-right.png"></a>
+            <a class="design-link">read more</a>
           </div>
         </div>
         <div class="content-wrapper ">
           <div class="design-logo">
-            <img src="./src/images/image-2.png" srcset="./src/images/image-2@2x.png 2x, ./src/images/image-2@3x.png 3x" alt="">
+            <img src="./src/images/image-2.png" srcset="./src/images/image-2@2x.png 2x, ./src/images/image-2@3x.png 3x" alt="oops"/>
           </div>
           <div class="design-description">
             <h3 class="design-title">The Blue Night</h3>
             <span class="design-data">May 2, 2019 • Ferdinand Davidson</span>
             <p class="design-text">Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Fusce commodo aliquam arcu. In ac felis...</p>
-            <a class="design-link">read more<img src="src/images/icon-chevron-right.png"></a>
+            <a class="design-link">read more</a>
           </div>
         </div>
         <div class="content-wrapper last-design">
           <div class="design-logo">
-            <img src="./src/images/image-3.png" srcset="./src/images/image-3@2x.png 2x, ./src/images/image-3@3x.png 3x" alt="">
+            <img src="./src/images/image-3.png" srcset="./src/images/image-3@2x.png 2x, ./src/images/image-3@3x.png 3x" alt="oops"/>
           </div>
           <div class="design-description">
             <h3 class="design-title">Image</h3>
             <span class="design-data">May 3, 2019 • Ferdinand Davidson</span>
             <p class="design-text">Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Fusce commodo aliquam arcu. In ac felis...</p>
-            <a class="design-link">read more<img src="src/images/icon-chevron-right.png"></a>
+            <a class="design-link">read more</a>
           </div>
         </div>
       </div>
     </section>
     <section class="jax-teller component">
-      <div class="jax-logo"><img src="./src/images/image-landing-3-photo.png" srcset="./src/images/image-landing-3-photo@2x.png 2x, ./src/images/image-landing-3-photo@3x.png 3x" alt=""></div>
+      <div class="jax-logo"><img src="./src/images/image-landing-3-photo.png" srcset="./src/images/image-landing-3-photo@2x.png 2x, ./src/images/image-landing-3-photo@3x.png 3x" alt="oops"/></div>
       <div class="jax-description">
         <span class="jax-text">When you start with a portrait and search for a pure form, a clear volume, through successive eliminations, you arrive inevitably at the egg. Likewise, starting with the egg and following the same process in reverse, one finishes with the portrait.   </span>
         <span class="jax-signature">- Jax Teller</span>
       </div>
     </section>
     <section class="logos component">
-      <img src="./src/images/logos/logos-1.png" alt=""/>
-      <img src="./src/images/logos/2.png" alt=""/>
-      <img src="./src/images/logos/3.png" alt=""/>
-      <img src="./src/images/logos/4.png" alt=""/>
-      <img src="./src/images/logos/5.png" alt=""/>
+      <img src="./src/images/logos/logos-1.png" alt="oops"/>
+      <img src="./src/images/logos/2.png" alt="oops"/>
+      <img src="./src/images/logos/3.png" alt="oops"/>
+      <img src="./src/images/logos/4.png" alt="oops"/>
+      <img src="./src/images/logos/5.png" alt="oops"/>
 
     </section>
     <section class="start-your-website component">
@@ -239,7 +241,7 @@
         <div class="last-tweet">
           <h3 class="footer-section-title">Last Tweet</h3>
           <div class="twitter-wrapper">
-            <div class="twitter-icon"><img src="./src/images/Twitter.png" alt=""></div>
+            <div class="twitter-icon"><img src="./src/images/Twitter.png" alt="oops"/></div>
             <div class="twitter-description">
               <span class="data">about 2 months ago</span>
               <p>Finally a new theme! Check out ‘Craftz - A wordPress Theme for Small Business Owners’</p>
@@ -250,13 +252,13 @@
           <h3 class="footer-section-title">Download Our App</h3>
           <p class="footer-section-description">Available on Google Play and App Store.</p>
           <div class="stores">
-            <img class="google-play" src="./src/images/googleplay-button-1.png" alt="">
-            <img src="./src/images/appstore-button-2.png" alt="">
+            <img class="google-play" src="./src/images/googleplay-button-1.png" alt="oops"/>
+            <img src="./src/images/appstore-button-2.png" alt="oops"/>
           </div>
           <div class="social-media">
-            <div><img src="src\images\icon-facebook.png" alt=""></div>
-            <div><img src="src\images\icon-twitter.png" alt=""></div>
-            <div><img src="src\images\icon-instagram.png" alt=""></div>
+            <div><img src="src/images/icon-facebook.png" alt="oops"/></div>
+            <div><img src="src/images/icon-twitter.png" alt="oops"/></div>
+            <div><img src="src/images/icon-instagram.png" alt="oops"/></div>
           </div>
         </div>
       </div>
