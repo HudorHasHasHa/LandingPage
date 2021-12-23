@@ -205,6 +205,7 @@ header{
     margin-bottom: 16px;
     border: 1px solid $component-border;
     .about-logo-mobile{
+      padding: 50px 30px;
       display: flex;
       align-items: center;
       img{
@@ -272,6 +273,7 @@ header{
     .offer-logo-mobile{
       display: flex;
       align-items: center;
+      padding: 50px 30px;
       img{
         object-fit: contain;
         width: 100%;
